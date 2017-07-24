@@ -1,0 +1,76 @@
+@import "variables";
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	color: #000;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.25;
+	font-family: $tf-1;
+	background-color: #fff;
+
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	outline: 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+
+/* Placeholder */
+::-webkit-input-placeholder { color: #000; opacity: 1; }
+::-moz-placeholder          { color: #000; opacity: 1; }
+:-moz-placeholder           { color: #000; opacity: 1; }
+:-ms-input-placeholder      { color: #000; opacity: 1; }
+:placeholder-shown          { color: #000; opacity: 1; }
+/* Placeholder-END */
+
+
+
+/* Container */
+.container {
+	width: 1440px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@media (max-width: $media-width-xl) {
+		width: 1176px;
+	}
+
+	@media (max-width: $media-width-l) {
+		width: 984px;
+	}
+
+	@media (max-width: $media-width-m) {
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+/* Container-END */
+
+
+
+/* Container Fluid */
+.container-fluid {
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@media (max-width: $media-width-m) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+/* Container Fluid-END */

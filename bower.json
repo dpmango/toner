@@ -1,0 +1,13 @@
+{
+  "name": "blank",
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "jquery-ui": "^1.11.4",
+    "normalize-css": "^4.1.1",
+    "slick-carousel": "^1.6.0",
+    "jquery.inputmask": "^3.3.1",
+    "scriptjs": "^2.5.8",
+    "fancybox": "^3.0.47",
+    "jquery_lazyload": "^1.9.1"
+  }
+}

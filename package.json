@@ -1,0 +1,50 @@
+{
+  "name": "blank",
+  "scripts": {
+    "watch-browser-sync": "node tasks/build.js --NODE_ENV browser-sync",
+    "watch-upload": "node tasks/watch-upload.js",
+    "build-dev": "node tasks/build.js",
+    "build-prod": "node tasks/build.js --NODE_ENV production"
+  },
+  "devDependencies": {
+    "advanced-url-loader": "0.0.4",
+    "autoprefixer": "^6.1.0",
+    "babel": "^6.0.15",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.1.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.1.4",
+    "babel-preset-stage-3": "^6.17.0",
+    "browser-sync": "^2.12.7",
+    "browser-sync-webpack-plugin": "^1.0.1",
+    "clean-webpack-plugin": "^0.1.14",
+    "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.4",
+    "gulp": "^3.9.0",
+    "gulp-ftp": "^1.0.4",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "html-loader": "^0.4.0",
+    "image-webpack-loader": "^1.6.2",
+    "imports-loader": "^0.6.5",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "node-sass": "^3.4.1",
+    "postcss": "^5.0.11",
+    "postcss-loader": "^0.8.0",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.4",
+    "yargs": "^4.3.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "clean-webpack-plugin": "^0.1.14",
+    "jquery-deparam": "^0.5.2",
+    "lodash": "^4.17.4",
+    "scriptjs": "^2.5.8"
+  }
+}

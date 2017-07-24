@@ -1,0 +1,8 @@
+@import "../core/variables";
+
+.form-error {
+
+	& .form__error {
+		display: block;
+	}
+}

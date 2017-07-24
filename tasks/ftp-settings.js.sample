@@ -1,0 +1,7 @@
+module.exports = {
+	host       : "binardi-team.ru",
+	port       : 21,
+	user       : "login",
+	pass       : "pass",
+	remotePath : "/public_html/bitrix/templates/common_v1/bundle" // remote path to bundle folder
+};

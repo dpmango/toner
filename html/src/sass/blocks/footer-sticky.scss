@@ -1,0 +1,16 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	//margin: 0 0 269px; /* bottom = footer height */
+}
+
+.footer {
+	//position: absolute; // Задается в JS, чтобы не было скачков блока до загрузки
+	left: 0;
+	bottom: 0;
+	//height: 269px;
+	width: 100%;
+}

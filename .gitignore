@@ -1,0 +1,7 @@
+/.idea
+/node_modules
+/bower_components
+/public_html/local/templates/.default/bundle
+/tasks/ftp-settings.js
+/npm-debug.log
+/public_html/bitrix
