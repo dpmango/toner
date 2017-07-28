@@ -1,0 +1,48 @@
+doctype html
+html(dir='ltr', lang='ru-RU')
+  head
+    meta(charset='UTF-8')
+    // Please, switch IE  to the last mode
+    //if IE
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    // Zooming on different devices
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no')
+    // CSS
+    link(rel='stylesheet', href='../public_html/local/templates/.default/bundle/dev/bundle.css')
+    link(rel='stylesheet', href='../local/templates/.default/bundle/dev/bundle.css')
+    // Fonts
+    title Index
+  body
+    //if lt IE 10
+      p.browsehappy
+        | К сожалению, вы используете устаревший браузер. Пожалуйста, 
+        a(href='http://browsehappy.com/', target='_blank') обновите ваш браузер
+        | , чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.
+    .page
+      // HEADER :: START
+      .header
+        .container
+          .header__wrapper
+            
+      // HEADER :: END
+    #pop-up-callback.pop-up(js-pop-up='')
+      .pop-up__insides(js-pop-up-insides='')
+        a.pop-up__close(href='#', js-pop-up-btn-close='') Закрыть
+    // JS
+    // <script src="../public_html/local/templates/.default/bundle/dev/bundle.js"></script>
+    // Удалить перед выгрузкой в продакшн - Начало
+    script(type='text/javascript').
+      var bundlePath = '/local/templates/.default/bundle/dev/';
+      var script;
+      script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = bundlePath + 'bundle.js';
+      script.onerror = function () {
+      document.body.removeChild(script);
+      script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = '../public_html' + bundlePath + 'bundle.js';
+      document.body.appendChild(script);
+      };
+      document.body.appendChild(script);
+    // Удалить перед выгрузкой в продакшн - Конец

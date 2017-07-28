@@ -1,6 +1,15 @@
-$tf-1: Arial, sans-serif !default;
+$tf-1: 'MuseoSansCyrl', Arial, sans-serif !default;
 
 $media-width-s: (768px - 1px) !default;
 $media-width-m: (1008px - 1px) !default;
 $media-width-l: (1176px + 30px) !default;
 $media-width-xl: (1440px + 30px) !default;
+
+$fontColor: #51525c;
+$colorMuted: #9496a7;
+$borderColor: #989797;
+$colorPink: #f6008b;
+$colorBlue: #02a9ec;
+
+$transitionSpeed: .25s;
+$ease: ease-in-out;

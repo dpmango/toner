@@ -89,4 +89,5 @@ const initCustomWidgets = window.initCustomWidgets = function () {
 	}
 
 	require.ensure(['./styles-entry'], (require) => require('./styles-entry'));
+  require.ensure(['./pug-entry'], (require) => require('./pug-entry'));
 };

@@ -1,0 +1,25 @@
+@import "../core/variables"
+
+
+.btn, button
+  -webkit-apperance: none
+  display: inline-block
+  cursor: pointer
+  transition: all $transitionSpeed $ease
+  &:focus
+    outline: none
+  &--ghost
+    font-weight: 300
+    padding: 10px
+    font-size: 15px
+    background: transparent
+    color: $fontColor
+    border: 2px solid $colorBlue
+    border-radius: 4px
+    &:hover
+      color: white
+      background: $colorBlue
+
+  &--block
+    display: block
+    width: 100%

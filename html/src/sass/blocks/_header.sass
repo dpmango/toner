@@ -1,0 +1,87 @@
+@import "../core/variables"
+
+// HEADER
+.header
+  background: white
+  padding: 35px 0
+  &__wrapper
+    display: flex
+  &__logo
+    flex: 0 0 180px
+    padding-right: 20px
+    align-self: flex-end
+    img
+      max-width: 100%
+
+  &__center
+    flex: 0 1 auto
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    flex-direction: column
+  &__contacts
+    flex: 0 0 auto
+    display: flex
+    flex-direction: column
+    padding-left: 20px
+  &__menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0
+    margin: 30px -10px 0 -10px
+    li
+      font-weight: 500
+      font-size: 16px
+      &.active
+        color: $colorPink
+
+      a
+        display: inline-block
+        padding: 5px 10px
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorPink
+  &__phone
+    font-size: 30px
+    text-transform: uppercase
+    font-weight: 700
+    transition: color $transitionSpeed $ease
+    span
+      color: $colorMuted
+      transition: color $transitionSpeed $ease
+    &:hover
+      color: $colorBlue
+      span
+        color: $fontColor
+  &__call
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 30px
+
+.search-header
+  display: flex
+  align-items: center
+  &__label
+    font-size: 15px
+    font-weight: 300
+    color: $colorMuted
+    margin-right: 20px
+  &__box
+    flex: 1 1 auto
+    display: inline-block
+    position: relative
+    input
+      width: 100%
+      padding-right: 40px
+    button
+      -webkit-apperance: none
+      background: transparent
+      border: none
+      position: absolute
+      top: 50%
+      right: 10px
+      transform: translateY(-50%)
+      font-size: 0
+      cursor: pointer

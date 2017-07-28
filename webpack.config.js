@@ -42,8 +42,12 @@ let config = {
 				loader: ExtractTextPlugin.extract('style', 'css-loader?sourceMap!postcss-loader!less-loader?sourceMap')
 			},
 			{
-				test: /\.scss$/,
+				test: /\.s(c|a)ss$/,
 				loader: ExtractTextPlugin.extract('style', 'css-loader?sourceMap!postcss-loader!sass?sourceMap')
+			},
+      {
+				test: /\.(pug|jade)$/,
+				loader: 'pug-loader'
 			},
 			{
 				test: /\.(jpe?g|png|gif)$/i,
@@ -54,7 +58,7 @@ let config = {
 				loader: 'advanced-url?limit=10000&name=[path][name].[ext]' + (PROD ? '!image-webpack' : '')
 			},
 			{
-				test: /(\.(ttf|eot|woff(2)?)|([\/\\]fonts[\/\\].+\.svg))($|\?)/i,
+				test: /(\.(ttf|eot|otf|woff(2)?)|([\/\\]fonts[\/\\].+\.svg))($|\?)/i,
 				loaders: [
 					'url?limit=10000&name=[path][name].[ext]'
 				]

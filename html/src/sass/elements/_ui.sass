@@ -1,0 +1,18 @@
+@import "../core/variables"
+
+// INPUT
+.ui-input
+  display: inline-block
+  -webkit-apperance: none
+  background: white
+  border: 1px solid $borderColor
+  border-radius: 3px
+  box-shadow: none
+  font-size: 15px
+  font-weight: 300
+  padding: 12px 15px
+  transition: border $transitionSpeed $ease
+  &::placeholder
+    color: $colorMuted
+  &:focus
+    border-color: $colorBlue
