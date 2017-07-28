@@ -20,3 +20,4 @@ require("./sass/blocks/under-construction.scss");
 require("./sass/blocks/yac.scss");
 
 require("./sass/blocks/_header.sass");
+require("./sass/blocks/hero.sass");

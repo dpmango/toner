@@ -19,7 +19,50 @@
     &:hover
       color: white
       background: $colorBlue
-
+  &--primary
+    font-weight: 500
+    padding: 15px 20px
+    font-size: 16px
+    line-height: 1
+    background: $colorBlue
+    color: white
+    border: 1px solid transparent
+    border-radius: 4px
+    text-transform: uppercase
+    &:hover
+      color: white
+      background: $colorPink
+  &--gradient
+    position: relative
+    z-index: 1
+    font-weight: 500
+    padding: 15px 20px
+    font-size: 16px
+    line-height: 1
+    color: white
+    border: 1px solid transparent
+    border-radius: 4px
+    text-transform: uppercase
+    overflow: hidden
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      width: 200%
+      height: 100%
+      transform: translate3d(-50%,0,0)
+      background: linear-gradient(to right, $colorBlue 0%, #faa900 50%, $colorPink 100%)
+      transition: all $transitionSpeed $ease
+    span
+      position: relative
+      z-index: 2
+    &:hover
+      color: white
+      &::after
+        transform: translate3d(0,0,0)
   &--block
     display: block
     width: 100%
