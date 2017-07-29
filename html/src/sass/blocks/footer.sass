@@ -1,0 +1,75 @@
+@import "../core/variables"
+@import "../core/mixins"
+
+
+.footer
+  background: #35363e
+  color: #9496a7
+  font-size: 16px
+  &__wrapper
+    padding: 45px 0 0px 0
+    display: flex
+  &__contacts
+    flex: 0 0 auto
+    display: flex
+    justify-content: space-between
+  &__menu
+    display: inline-block
+    flex: 0 1 auto
+    margin-left: auto
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 0
+    margin: 0
+    color: white
+    li
+      font-weight: 500
+      font-size: 16px
+      &.active
+        color: $colorPink
+      a
+        display: inline-block
+        padding: 5px 5px
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorPink
+  &__bottom
+    padding: 50px 0 40px 0
+    display: flex
+    font-size: 14px
+    font-weight: 300
+  &__copy
+    flex: 0 1 auto
+  &__developer
+    display: inline-block
+    flex: 0 0 auto
+    margin-left: auto
+    display: flex
+    align-items: baseline
+    transition: opacity $transitionSpeed $ease
+    span
+      display: inline-block
+      margin-right: 5px
+    &:hover
+      opacity: .7
+
+
+
+
+.contacts-footer
+  &__col
+    flex: 0 1 50%
+    max-width: 210px
+  a
+    display: block
+    margin-bottom: 10px
+    font-weight: 500
+    font-size: 18px
+    color: white
+    transition: color $transitionSpeed $ease
+    &:hover
+      color: $colorPink
+  span
+    line-height: 2
+    font-weight: 300
