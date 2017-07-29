@@ -22,3 +22,4 @@ require("./sass/blocks/yac.scss");
 require("./sass/blocks/_header.sass");
 require("./sass/blocks/hero.sass");
 require("./sass/blocks/cta.sass");
+require("./sass/blocks/services.sass");

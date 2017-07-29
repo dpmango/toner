@@ -1,0 +1,44 @@
+@import "../core/variables"
+@import "../core/mixins"
+
+
+// SERVICES
+.services
+  background: white
+  padding: 75px 0 85px 0
+  &__wrapper
+    margin-top: 70px
+    display: flex
+  &__left
+    flex: 0 1 50%
+    &-name
+      font-weight: 500
+      font-size: 18px
+      color: #787987
+  &__right
+    flex: 0 1 50%
+  &__cta
+    margin-top: 20px
+    display: flex
+    align-items: center
+    span
+      margin-left: 15px
+
+.manufacturer-list
+  display: flex
+  flex-wrap: wrap
+  margin-top: 20px
+  a
+    flex: 0 1 25%
+    margin: 12px 0
+    cursor: pointer
+    span
+      font-weight: 300
+      line-height: 1
+      border-bottom: 1px solid rgba($colorBlue, .5)
+      color: $colorBlue
+      transition: all $transitionSpeed $ease
+    &:hover
+      span
+        border-color: transparent
+        color: $colorPink
