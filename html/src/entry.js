@@ -88,6 +88,10 @@ const initCustomWidgets = window.initCustomWidgets = function () {
 		require.ensure(['./js/modules/tabs'], (require) => require('./js/modules/tabs')());
 	}
 
+  if (document.querySelector('a[href="#"]')) {
+		require.ensure(['./js/modules/preventDefault'], (require) => require('./js/modules/preventDefault')());
+	}
+
 	require.ensure(['./styles-entry'], (require) => require('./styles-entry'));
   require.ensure(['./pug-entry'], (require) => require('./pug-entry'));
 };
