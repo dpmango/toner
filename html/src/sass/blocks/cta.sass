@@ -1,4 +1,6 @@
 @import "../core/variables"
+@import "../core/mixins"
+
 
 // CTA
 .cta
@@ -10,14 +12,86 @@
 
   &__top
     display: flex
+    align-items: flex-end
+
+  &__phone
+    margin-bottom: 25px
+    font-size: 24px
+    text-transform: uppercase
+    font-weight: 700
+    transition: color $transitionSpeed $ease
+    span
+      color: $colorMuted
+      transition: color $transitionSpeed $ease
+    &:hover
+      color: $colorBlue
+      span
+        color: $fontColor
+
+  &__steps
+    display: flex
+    margin-top: 70px
+    padding-bottom: 80px
 
 .top-cta
   &__intro-text
     font-size: 18px
     color: $colorMuted
-    margin-top: 10px
+    margin-top: 15px
   &__left
     flex: 0 1 50%
   &__right
     flex: 0 1 auto
     margin-left: auto
+    font-size: 16px
+    display: flex
+    flex-direction: column
+    .blue-link
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+
+.steps-cta
+  margin-left: -15px
+  margin-right: -15px
+  &__step
+    flex: 0 1 35%
+    display: flex
+    align-items: center
+    padding-left: 15px
+    padding-right: 15px
+    &:last-child
+      flex-basis: 30%
+    .ico-arrow
+      margin-top: 25px
+  &__wrapper
+    display: flex
+    flex-direction: column
+  &__image
+    min-height: 120px
+  &__name
+    max-width: 300px
+    font-size: 24px
+    font-weight: 700
+    span
+      display: inline-block
+      margin-right: 5px
+      font-weight: 500
+      font-size: 18px
+    &--blue
+      span
+        color: $colorBlue
+    &--yellow
+      span
+        color: $colorYellow
+    &--pink
+      span
+        color: $colorPink
+
+  &__description
+    max-width: 300px
+    font-size: 16px
+    font-weight: 300
+    margin-top: 15px
+    line-height: 1.5
+    color: $colorMuted

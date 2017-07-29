@@ -2,13 +2,18 @@
 
 
 .blue-link
-  font-weight: 300
-  border-bottom: 1px solid $colorBlue
-  color: rgba($colorBlue, .5)
-  transition: all $transitionSpeed $ease
+  .ico, .icon
+    margin-right: 5px
+  span
+    font-weight: 300
+    line-height: 1
+    border-bottom: 1px solid rgba($colorBlue, .5)
+    color: $colorBlue
+    transition: all $transitionSpeed $ease
   &:hover
-    border-color: transparent
-    color: $colorPink
+    span
+      border-color: transparent
+      color: $colorPink
 
 .h2-title
   font-weight: 700
