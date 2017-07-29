@@ -23,3 +23,5 @@ require("./sass/blocks/_header.sass");
 require("./sass/blocks/hero.sass");
 require("./sass/blocks/cta.sass");
 require("./sass/blocks/services.sass");
+require("./sass/blocks/promo.sass");
+require("./sass/blocks/text-block.sass");
