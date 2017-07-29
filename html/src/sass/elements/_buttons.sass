@@ -1,4 +1,6 @@
 @import "../core/variables"
+@import "../core/mixins"
+
 
 
 .btn, button
@@ -66,3 +68,8 @@
   &--block
     display: block
     width: 100%
+
++r($l)
+  .btn
+    &--ghost
+      font-size: 14px

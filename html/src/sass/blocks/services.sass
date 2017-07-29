@@ -21,16 +21,20 @@
     margin-top: 20px
     display: flex
     align-items: center
+    .btn
+      flex-shrink: 0
     span
       margin-left: 15px
 
 .manufacturer-list
   display: flex
   flex-wrap: wrap
-  margin-top: 20px
+  margin: 20px -10px 0 -10px
   a
     flex: 0 1 25%
-    margin: 12px 0
+    margin: 12px 0px
+    padding-left: 10px
+    padding-right: 10px
     cursor: pointer
     span
       font-weight: 300
@@ -52,3 +56,12 @@
       flex-basis: 60%
     &__right
       flex-basis: 40%
+
+
++r($l)
+  .services
+    padding: 50px 0 40px 0
+
+  .manufacturer-list
+    a
+      flex: 0 1 33.3%

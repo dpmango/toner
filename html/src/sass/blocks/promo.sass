@@ -6,9 +6,10 @@
   padding: 80px 0
   &__head
     display: flex
-    align-items: center
+    align-items: baseline
     .blue-link
-      margin-left: 10px
+      font-size: 18px
+      margin-left: 15px
   &__list
     margin-top: 60px
     display: flex
@@ -61,3 +62,11 @@
     &-card
       &__image
         height: 150px
+
++r($l)
+  .promo
+    padding: 50px 0
+    &-card
+      flex-basis: 33.3%
+      &:nth-child(4n + 1)
+        display: none
