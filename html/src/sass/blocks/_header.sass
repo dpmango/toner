@@ -1,4 +1,6 @@
 @import "../core/variables"
+@import "../core/mixins"
+
 
 // HEADER
 .header
@@ -9,12 +11,13 @@
     display: flex
     padding: 35px 0
   &__logo
+    display: inline-block
     flex: 0 0 180px
-    padding-right: 20px
+    margin-right: 20px
+    margin-bottom: 8px
     align-self: flex-end
     img
       max-width: 100%
-
   &__center
     flex: 0 1 auto
     margin-left: auto
@@ -31,7 +34,9 @@
     align-items: center
     justify-content: space-between
     padding: 0
-    margin: 30px -10px 0 -10px
+    margin: 25px -10px 0px -10px
+    &--l
+      display: none
     li
       font-weight: 500
       font-size: 16px
@@ -40,7 +45,7 @@
 
       a
         display: inline-block
-        padding: 5px 10px
+        padding: 10px 10px
         transition: all $transitionSpeed $ease
         &:hover
           color: $colorPink
@@ -48,6 +53,7 @@
     font-size: 30px
     text-transform: uppercase
     font-weight: 700
+    margin-top: 8px
     transition: color $transitionSpeed $ease
     span
       color: $colorMuted
@@ -60,10 +66,7 @@
     display: flex
     align-items: center
     justify-content: space-between
-    margin-top: 30px
-  &__cmyk
-    display: flex
-    height: 3px
+    margin-top: 22px
 
 .search-header
   display: flex
@@ -92,6 +95,8 @@
       cursor: pointer
 
 .cmyk-line
+  display: flex
+  height: 3px
   &__line
     flex: 0 1 25%
     &--blue
@@ -102,3 +107,42 @@
       background: #141414
     &--pink
       background: $colorPink
+
++r($xl)
+  .header
+    &__wrapper
+      padding: 25px 0 0 0
+      align-items: flex-start
+    &__logo
+      margin-right: 40px
+      margin-bottom: 0
+      margin-top: 10px
+    &__center
+      flex: 1 1 auto
+      margin-top: 7px
+    &__menu
+      display: none
+      padding-bottom: 20px
+      &--l
+        display: flex
+    &__contacts
+      padding-left: 90px
+    &__phone
+      margin-top: 0
+      font-size: 24px
+      text-align: right
+    &__call
+      margin-top: 15px
+      .btn
+        margin-left: 15px
+
+
+  .search-header
+    flex-direction: column
+    align-items: flex-start
+    &__label
+      margin-bottom: 17px
+    &__box
+      width: 100%
+      input
+        display: block

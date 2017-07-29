@@ -13,7 +13,7 @@
     flex: 0 0 auto
     display: flex
     justify-content: space-between
-  &__menu
+  &__menu, .footer__menu ul
     display: inline-block
     flex: 0 1 auto
     margin-left: auto
@@ -23,6 +23,8 @@
     padding: 0
     margin: 0
     color: white
+    &--l
+      display: none
     li
       font-weight: 500
       font-size: 16px
@@ -56,7 +58,6 @@
 
 
 
-
 .contacts-footer
   &__col
     flex: 0 1 50%
@@ -73,3 +74,38 @@
   span
     line-height: 2
     font-weight: 300
+
++r($xl)
+  .footer
+    padding-bottom: 30px
+    > .container
+      display: flex
+      align-items: flex-end
+    &__wrapper
+      padding: 25px 0 0 0
+    &__contacts
+      flex: 0 0 600px
+    &__bottom
+      margin-left: auto
+      flex-direction: column
+      align-items: flex-end
+      text-align: right
+      padding: 0 0 10px 0
+    &__developer
+      flex: 0 0 auto
+      order: 1
+      margin-bottom: 20px
+    &__copy
+      flex: 0 0 auto
+      order: 2
+    &__menu
+      display: none
+      width: 100%
+      background: #3e4049
+      padding: 22px 0
+      &--l
+        display: flex
+
+  .contacts-footer
+    &__col
+      max-width: 300px

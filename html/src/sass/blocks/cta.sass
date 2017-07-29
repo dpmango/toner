@@ -4,7 +4,7 @@
 
 // CTA
 .cta
-  padding: 70px 0 0 0
+  padding: 140px 0 0 0
   background: #fafafa
   &__wrapper
     display: flex
@@ -35,11 +35,13 @@
 
 .top-cta
   &__intro-text
+    font-weight: 300
     font-size: 18px
     color: $colorMuted
     margin-top: 15px
   &__left
-    flex: 0 1 50%
+    flex: 0 1 auto
+    max-width: 690px
   &__right
     flex: 0 1 auto
     margin-left: auto
@@ -67,10 +69,10 @@
   &__wrapper
     display: flex
     flex-direction: column
+    max-width: 300px
   &__image
     min-height: 120px
   &__name
-    max-width: 300px
     font-size: 24px
     font-weight: 700
     span
@@ -89,9 +91,17 @@
         color: $colorPink
 
   &__description
-    max-width: 300px
     font-size: 16px
     font-weight: 300
     margin-top: 15px
     line-height: 1.5
     color: $colorMuted
+
++r($xl)
+  .steps-cta
+    &__wrapper
+      max-width: 250px
+    &__step
+      .ico-arrow
+        margin-left: auto
+        margin-right: 5%

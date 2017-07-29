@@ -14,6 +14,8 @@
       font-size: 16px
       color: $colorMuted
       font-weight: 300
+      &:first-child
+        margin-top: 0
   &__images
     flex: 0 1 50%
     display: flex
@@ -35,3 +37,9 @@
       min-height: 100%
       width: auto
       height: auto
+
++r($xl)
+  .text-block
+    padding: 70px 0
+    &__image
+      height: 170px

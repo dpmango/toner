@@ -56,15 +56,15 @@ ul{
 	padding-left: 15px;
 	padding-right: 15px;
 
-	@media (max-width: $media-width-xl) {
+	@media (max-width: $xl) {
 		width: 1176px;
 	}
 
-	@media (max-width: $media-width-l) {
+	@media (max-width: $l) {
 		width: 984px;
 	}
 
-	@media (max-width: $media-width-m) {
+	@media (max-width: $m) {
 		width: auto;
 		padding-left: 10px;
 		padding-right: 10px;
@@ -79,7 +79,7 @@ ul{
 	padding-left: 15px;
 	padding-right: 15px;
 
-	@media (max-width: $media-width-m) {
+	@media (max-width: $m) {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
