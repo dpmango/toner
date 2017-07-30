@@ -10,6 +10,10 @@
   &__wrapper
     display: flex
     padding: 35px 0
+  &__mobile
+    display: none
+    background: #fafafa
+    padding: 8px 0
   &__logo
     display: inline-block
     flex: 0 0 180px
@@ -94,6 +98,14 @@
       font-size: 0
       cursor: pointer
 
+.mobile-header
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__hamburger
+
+
 .cmyk-line
   display: flex
   height: 3px
@@ -153,3 +165,46 @@
       padding-left: 30px
     &__call
       font-size: 14px
+
++r($m)
+  .header
+    &__logo
+      flex-basis: 90px
+
++r($s)
+  .header
+    &__wrapper
+      flex-wrap: wrap
+      padding-top: 10px
+    &__mobile
+      display: block
+    &__logo
+      flex-basis: 120px
+      margin: 0
+    &__center
+      flex: 1 1 100%
+      margin: 20px -15px 0 -15px
+      padding: 8px 15px
+      background: #35363e
+      order: 3
+    &__contacts
+      padding-top: 7px
+      margin-left: auto
+      padding-left: 0
+
+    &__menu
+      &--l
+        display: none
+
+    &__phone
+      font-size: 18px
+
+    &__call
+      margin-top: 5px
+      align-self: flex-end
+      .btn
+        display: none
+
+  .search-header
+    &__label
+      display: none

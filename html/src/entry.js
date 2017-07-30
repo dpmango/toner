@@ -92,6 +92,10 @@ const initCustomWidgets = window.initCustomWidgets = function () {
 		require.ensure(['./js/modules/preventDefault'], (require) => require('./js/modules/preventDefault')());
 	}
 
+  if (document.querySelector('.hamburger')) {
+		require.ensure(['./js/modules/hamburgerMobile'], (require) => require('./js/modules/hamburgerMobile')());
+	}
+
 	require.ensure(['./styles-entry'], (require) => require('./styles-entry'));
   require.ensure(['./pug-entry'], (require) => require('./pug-entry'));
 };

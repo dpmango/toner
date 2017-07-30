@@ -1,3 +1,7 @@
+@import "../core/variables"
+@import "../core/mixins"
+
+
 .ico
   display: inline-block
   content: ' '
@@ -6,6 +10,19 @@
   background-repeat: no-repeat
   font-style: normal
   vertical-align: middle
+
+  &-logo
+    background-image: url('../../img/logo@2x.png')
+    width: 181px
+    height: 75px
+    +r($m)
+      background-image: url('../../img/logoMini@2x.png')
+      width: 90px
+      height: 75px
+    +r($s)
+      background-image: url('../../img/logo@2x.png')
+      width: 120px
+      height: 50px
 
   &-search
     background-image: url('../../img/icons/search@2x.png')

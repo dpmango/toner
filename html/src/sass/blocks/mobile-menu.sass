@@ -1,0 +1,41 @@
+@import "../core/variables"
+@import "../core/mixins"
+
+.mobile-menu
+  flex-direction: column
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+  min-height: 100vh
+  padding: 20px
+  background: #fafafa
+  opacity: 0
+  transform: translate3d(-100%,0,0)
+  transition: transform $transitionSpeed $ease
+  &__list
+    flex: 0 1 auto
+    margin: auto 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    li
+      font-weight: 500
+      font-size: 16px
+      border-bottom: 1px solid #e3e3e3
+      &.active
+        color: $colorPink
+      a
+        display: inline-block
+        padding: 10px 10px
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorPink
+  &.active
+    transform: translate3d(0,0,0)
+    opacity: 1
+
++r($s)
+  .mobile-menu
+    display: flex
