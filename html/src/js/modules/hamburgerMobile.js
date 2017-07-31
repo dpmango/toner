@@ -13,7 +13,9 @@ module.exports = function () {
   });
 
   // declare variables
-  const hamburger = document.querySelector('.hamburger');
+  const body = document.querySelector('body');
+  const hamburger = document.querySelector('.js-openMenu');
+  const hamburgerClose = document.querySelector('.js-closeMenu');
   const mobileMenu = document.querySelector('.mobile-menu');
 
   const toggleClass = function(el, cl) {
@@ -27,9 +29,18 @@ module.exports = function () {
 
     toggleClass(hamburger, 'is-active');
     toggleClass(mobileMenu, 'active');
+    toggleClass(body, 'locked');
 
     event.preventDefault();
     event.stopPropagation();
+  });
+
+  hamburgerClose.addEventListener('click', (event) => {
+    if (!mobileMenu) { return; }
+
+    toggleClass(hamburger, 'is-active');
+    toggleClass(mobileMenu, 'active');
+    toggleClass(body, 'locked');
   });
 
 };

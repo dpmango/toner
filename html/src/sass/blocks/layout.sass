@@ -1,5 +1,16 @@
 @import "../core/variables"
+@import "../core/mixins"
 
+
+body
+  &.locked
+    height: 100vh
+    overflow: hidden
+    pointer-events: none
+    // &::after
+    //   display: inline-block
+    //   position: absolute 0
+    //   background: #000
 
 .blue-link
   display: flex
@@ -22,11 +33,17 @@
   font-weight: 700
   font-size: 36px
   line-height: 1
+  +r($m)
+    font-size: 24px
+  +r($s)
+    font-size: 18px
 
 .h3-title
   font-weight: 700
   font-size: 30px
   line-height: 1
+  +r($m)
+    font-size: 24px
 
 .t-primary
   font-weight: 500

@@ -4,7 +4,9 @@
     "watch-browser-sync": "node tasks/build.js --NODE_ENV browser-sync",
     "watch-upload": "node tasks/watch-upload.js",
     "build-dev": "node tasks/build.js",
-    "build-prod": "node tasks/build.js --NODE_ENV production"
+    "build-prod": "node tasks/build.js --NODE_ENV production",
+    "start": "node tasks/build.js --NODE_ENV browser-sync",
+    "surge": "surge --domain toner.surge.sh"
   },
   "devDependencies": {
     "advanced-url-loader": "0.0.4",
