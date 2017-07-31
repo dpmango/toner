@@ -9,11 +9,9 @@
   &__wrapper
     display: flex
     flex-direction: column
-
   &__top
     display: flex
     align-items: flex-end
-
   &__phone
     margin-bottom: 25px
     font-size: 24px
@@ -149,10 +147,21 @@
 
 +r($s)
   .cta
+    padding-top: 110px
     &__steps
       flex-wrap: wrap
-
+      padding-bottom: 40px
   .top-cta
+    flex-direction: column
+    max-width: 400px
+    margin-left: auto
+    margin-right: auto
+    &__left
+      flex: 0 0 auto
+    &__right
+      flex: 0 0 auto
+      margin-left: 0
+      margin-top: 30px
     &__intro-text
       font-size: 14px
 
@@ -164,17 +173,25 @@
       flex: 0 1 100%
       padding: 0
       margin-bottom: 25px
+      &:last-child
+        flex-basis: 100%
       .ico-arrow
         display: none
     &__wrapper
-      flex-direction: row
+      position: relative
+      max-width: 100%
+      padding-left: 80px
     &__image
+      position: absolute
+      top: 0
+      left: 0
       min-height: 0
       flex: 0 0 60px
       margin-right: 20px
       .ico
-        transform: scale(.6)
+        transform: scale(.42)
     &__name
+      flex: 1 1 calc(100% - 80px)
       font-size: 16px
       span
         font-size: 16px

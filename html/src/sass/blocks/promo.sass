@@ -8,6 +8,7 @@
     display: flex
     align-items: baseline
     .blue-link
+      display: inline-block
       font-size: 18px
       margin-left: 15px
   &__list
@@ -73,6 +74,10 @@
 
 +r($m)
   .promo
+    padding-bottom: 0
+    &__head
+      .blue-link
+        font-size: 16px
     &-card
       &__image
         height: 140px
@@ -80,3 +85,22 @@
         font-size: 18px
       &__description
         font-size: 15px
+
++r($s)
+  .promo
+    &__head
+      .blue-link
+        font-size: 14px
+    &-card
+      flex: 0 0 100%
+      max-width: 400px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 40px
+      &__image
+        height: 170px
+      &__title
+        margin-top: 15px
+        font-size: 16px
+      &__description
+        font-size: 14px
