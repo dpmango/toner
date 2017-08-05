@@ -73,6 +73,15 @@
     margin-top: 20px
     font-size: 16px
     font-weight: 300
+  &--inner
+    margin-top: 20px
+    margin-bottom: 55px
+    .benefits-hero
+      &__item-left
+        text-align: left
+      &__name
+        color: $fontColor
+
 
 +r($xl)
   .hero
@@ -82,6 +91,8 @@
     &__title
       font-size: 48px
       line-height: 1
+    &__description
+      margin-top: 15px
     &__benefits
       margin-top: 120px
 
@@ -90,9 +101,9 @@
       margin-bottom: 35px
 
 +r($l)
-  .hero
-
   .benefits-hero
+    &--inner
+      margin-bottom: 20px
     &__item
       &-left
         flex: 0 0 50px
@@ -118,6 +129,11 @@
   .benefits-hero
     &__item
       flex: 0 0 50%
+    &__name
+      font-size: 16px
+    &__description
+      font-size: 15px
+
 
 +r($s)
   .hero
@@ -146,3 +162,8 @@
       flex: 0 0 100%
       padding: 0
       margin-bottom: 20px
+      &-left
+        flex: 0 0 30px
+    &__description
+      font-size: 14px
+      margin-top: 5px

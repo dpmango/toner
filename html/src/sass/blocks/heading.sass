@@ -1,0 +1,58 @@
+@import "../core/variables"
+@import "../core/mixins"
+
+
+// HEADING
+.heading
+  margin-top: 40px
+  &__breadcrumbs
+    margin-bottom: 40px
+    a, span
+      font-weight: 300
+      display: inline-block
+      font-size: 14px
+      padding: 5px 0px
+      transition: color $transitionSpeed $ease
+    a::after
+      display: inline-block
+      content: '/'
+      padding-left: 10px
+      padding-right: 10px
+      color: $colorMuted
+    a:hover
+      color: $colorBlue
+    span
+      color: $colorMuted
+  .h1-title
+    margin-bottom: 15px
+  p
+    font-size: 16px
+    max-width: 1050px
+    font-weight: 300
+    line-height: 1.67
+    color: $colorMuted
+
++r($xl)
+  .heading
+    &__breadcrumbs
+      margin-bottom: 35px
+
++r($l)
+  .heading
+    &__breadcrumbs
+      margin-bottom: 30px
+
++r($m)
+  .heading
+    p
+      font-size: 15px
+
+
++r($s)
+  .heading
+    margin-top: 30px
+    &__breadcrumbs
+      margin-bottom: 20px
+    p
+      font-size: 14px
+      line-height: 1.5

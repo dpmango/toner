@@ -29,6 +29,17 @@ body
       border-color: transparent
       color: $colorPink
 
+.h1-title
+  font-weight: 700
+  font-size: 60px
+  line-height: 1
+  +r($xl)
+    font-size: 48px
+  +r($m)
+    font-size: 36px
+  +r($s)
+    font-size: 24px
+
 .h2-title
   font-weight: 700
   font-size: 36px
@@ -50,8 +61,16 @@ body
 .t-primary
   font-weight: 500
   font-size: 18px
+  +r($m)
+    font-size: 17px
+  +r($s)
+    font-size: 16px
 
 .t-muted
   font-weight: 300
   font-size: 16px
   color: $colorMuted
+  +r($m)
+    font-size: 15px
+  +r($s)
+    font-size: 14px
