@@ -30,3 +30,5 @@ require("./sass/blocks/head-nav.sass");
 require("./sass/blocks/price-table.sass");
 require("./sass/blocks/catalog-card.sass");
 require("./sass/blocks/contact.sass");
+require("./sass/blocks/blog-content.sass");
+require("./sass/blocks/similar.sass");
