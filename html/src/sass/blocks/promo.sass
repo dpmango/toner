@@ -4,6 +4,14 @@
 .promo
   background: #fafafa
   padding: 80px 0
+  &--inner
+    background: transparent
+    padding-top: 45px
+    padding-bottom: 0
+    .promo__list
+      margin-top: 0
+    .promo-card
+      margin-bottom: 60px
   &__head
     display: flex
     align-items: baseline
@@ -71,6 +79,10 @@
       flex-basis: 33.3%
       &:nth-child(4n + 1)
         display: none
+    &--inner
+      .promo-card
+        &:nth-child(4n + 1)
+        display: inline-block
 
 +r($m)
   .promo
