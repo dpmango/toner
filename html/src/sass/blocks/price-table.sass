@@ -1,0 +1,35 @@
+@import "../core/variables"
+@import "../core/mixins"
+
+
+.price-table
+  background: #fafafa
+  padding: 60px 0 80px
+  &__top
+    margin-bottom: 30px
+    max-width: 690px
+    form
+      margin-top: 20px
+    .search-header__box input
+      display: block
+      width: 100%
+    .t-muted
+      margin-top: 10px
+  table
+    font-size: 16px
+    width: 100%
+    border-collapse: collapse
+    thead
+      color: $colorMuted
+    td
+      padding: 20px 10px
+    tr
+      td
+        &:first-child
+          padding-left: 0
+        &:last-child
+          padding-right: 0
+    tbody
+      font-weight: 700
+      td
+        border-top: 1px solid #cdcdcd

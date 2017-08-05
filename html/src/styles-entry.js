@@ -26,3 +26,5 @@ require("./sass/blocks/services.sass");
 require("./sass/blocks/promo.sass");
 require("./sass/blocks/text-block.sass");
 require("./sass/blocks/heading.sass");
+require("./sass/blocks/head-nav.sass");
+require("./sass/blocks/price-table.sass");

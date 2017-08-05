@@ -1,0 +1,36 @@
+@import "../core/variables"
+@import "../core/mixins"
+
+
+// HEAD NAV
+.head-nav
+  background: #51525c
+  padding: 30px
+  &__list
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    margin-left: -5px
+    margin-right: -5px
+    a
+      font-weight: 300
+      font-size: 18px
+      padding: 6px 5px
+      flex: 0 1 12.5%
+      color: white
+      text-decoration: underline
+      transition: color $transitionSpeed $ease
+      &:hover
+        color: $colorYellow
+        text-decoration: none
+      &.active
+        font-weight: 700
+        color: $colorYellow
+        text-decoration: none
+
++r($l)
+  .head-nav
+    &__list
+      a
+        font-size: 16px
+        flex: 0 1 15%
