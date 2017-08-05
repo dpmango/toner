@@ -29,3 +29,4 @@ require("./sass/blocks/heading.sass");
 require("./sass/blocks/head-nav.sass");
 require("./sass/blocks/price-table.sass");
 require("./sass/blocks/catalog-card.sass");
+require("./sass/blocks/contact.sass");

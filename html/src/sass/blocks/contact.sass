@@ -1,0 +1,77 @@
+@import "../core/variables"
+@import "../core/mixins"
+
+// CONTACT
+.contact
+  &__jumbo
+    margin-top: 30px
+    padding: 45px 60px
+    background: #fafafa
+    border-left: 2px solid $colorBlue
+    &-wrapper
+      display: flex
+      align-items: center
+      margin: 20px -10px 0 -10px
+  &__line
+    flex: 0 1 300px
+    margin-bottom: 20px
+    padding: 0 10px
+    &--long
+      flex-basis: 540px
+    &-name
+      font-size: 16px
+      font-weight: 300
+      color: $colorMuted
+    &-text
+      font-size: 18px
+      font-weight: 700
+      margin-top: 10px
+      span
+        color: $colorMuted
+      a
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorBlue
+  &__phone
+    font-size: 24px
+
+  &__form
+    margin: 70px 0
+    max-width: 1000px
+
+
+.form-contact
+  &__title
+    font-size: 36px
+    font-weight: 300
+    margin-bottom: 15px
+  &__wrapper
+    display: flex
+    margin-top: 25px
+  &__left
+    flex: 0 0 270px
+    margin-right: 30px
+  &__right
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    .ui-group
+      flex: 1 1 auto
+      display: flex
+      flex-direction: column
+    textarea
+      flex: 1 1 auto
+      height: auto
+  .ui-input
+    width: 100%
+    display: block
+  &__cta
+    max-width: 640px
+    margin-top: 50px
+    .btn
+      margin-top: 30px
+
+
+.contact-map
+  height: 560px
+  background: rgba(blue, .05)
