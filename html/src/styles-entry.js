@@ -13,7 +13,7 @@ require("./sass/elements/_buttons.sass");
 require("./sass/vendor/hamburgers/hamburgers.scss");
 
 require("./sass/blocks/footer-sticky.scss");
-require("./sass/blocks/pop-up.scss");
+require("./sass/blocks/pop-up.sass");
 require("./sass/blocks/form-error.scss");
 require("./sass/blocks/page.scss");
 
