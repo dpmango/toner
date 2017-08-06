@@ -10,7 +10,6 @@ module.exports = function () {
 		self.dataset[moduleName + 'Init'] = true;
 
 
-
 		const wrapper 		 		 = self;
 		const jsonContainer  		 = wrapper.querySelector('[js-yandex-map-json-container]');
 		const buttonsOpeningBalloons = wrapper.querySelectorAll('[js-yandex-map-btn-open-balloon]');
