@@ -31,14 +31,15 @@
         <div class="header__mobile mobile-header">
           <div class="container">
             <div class="mobile-header__wrapper">
-              <div class="mobile-header__hamburger">
-                <div class="hamburger hamburger--squeeze js-openMenu">
+              <div class="mobile-header__hamburger" js-open-menu>
+                <div class="hamburger hamburger--squeeze">
                   <div class="hamburger-box">
                     <div class="hamburger-inner"></div>
                   </div>
                 </div>
+                <span>Меню</span>
               </div>
-              <a href="#" class="btn btn--ghost">Вызвать курьера</a>
+              <a href="#" class="btn btn--ghost" data-pop-up-id="#pop-up-courier" js-pop-up-btn-open>Вызвать курьера</a>
             </div>
 
           </div>
@@ -63,19 +64,19 @@
               </div>
               <ul class="header__menu">
                 <li>
-                  <a href="#">Заправить картридж</a>
+                  <a href="catalog.html">Заправить картридж</a>
                 </li>
                 <li>
-                  <a href="#">Наши услуги</a>
+                  <a href="catalog-card.html">Наши услуги</a>
                 </li>
                 <li>
-                  <a href="#">Специальные предложения</a>
+                  <a href="blog.html">Специальные предложения</a>
                 </li>
                 <li>
                   <a href="#">О компании</a>
                 </li>
                 <li>
-                  <a href="#">Контакты</a>
+                  <a href="contacts.html">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -83,28 +84,28 @@
             <div class="header__contacts">
               <a href='tel:+7812999-99-99' class="header__phone"><span>+7 (812)</span> 999-99-99</a>
               <div class="header__call">
-                <a href="#" class='blue-link'>
+                <a href="#" class='blue-link' data-pop-up-id="#pop-up-callback" js-pop-up-btn-open>
                   <span>Заказать звонок</span>
                 </a>
-                <a href="#" class="btn btn--ghost">Вызвать курьера</a>
+                <a href="#" class="btn btn--ghost" data-pop-up-id='#pop-up-courier' js-pop-up-btn-open>Вызвать курьера</a>
               </div>
             </div>
           </div>
           <ul class="header__menu header__menu--l">
             <li>
-              <a href="#">Заправить картридж</a>
+              <a href="catalog.html">Заправить картридж</a>
             </li>
             <li>
-              <a href="#">Наши услуги</a>
+              <a href="catalog-card.html">Наши услуги</a>
             </li>
             <li>
-              <a href="#">Специальные предложения</a>
+              <a href="blog.html">Специальные предложения</a>
             </li>
             <li>
               <a href="#">О компании</a>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <a href="contacts.html">Контакты</a>
             </li>
           </ul>
         </div>
@@ -118,27 +119,27 @@
       <!-- HEADER :: END -->
 
       <!-- MOBILE MENU :: START -->
-      <div class="mobile-menu">
-        <div class="hamburger hamburger--squeeze is-active js-closeMenu">
+      <div class="mobile-menu" js-mobile-menu>
+        <div class="hamburger hamburger--squeeze is-active" js-close-menu>
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
           </div>
         </div>
         <ul class="mobile-menu__list">
           <li>
-            <a href="#">Заправить картридж</a>
+            <a href="catalog.html">Заправить картридж</a>
           </li>
           <li>
-            <a href="#">Наши услуги</a>
+            <a href="catalog-card.html">Наши услуги</a>
           </li>
           <li>
-            <a href="#">Специальные предложения</a>
+            <a href="blog.html">Специальные предложения</a>
           </li>
           <li>
             <a href="#">О компании</a>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <a href="contacts.html">Контакты</a>
           </li>
         </ul>
       </div>
@@ -187,19 +188,19 @@
           <div class="container">
             <ul>
               <li>
-                <a href="#">Выбрать картридж</a>
+                <a href="catalog.html">Заправить картридж</a>
               </li>
               <li>
-                <a href="#">Наши услуги</a>
+                <a href="catalog-card.html">Наши услуги</a>
               </li>
               <li>
-                <a href="#">Специальные предложения</a>
+                <a href="blog.html">Специальные предложения</a>
               </li>
               <li>
                 <a href="#">О компании</a>
               </li>
               <li>
-                <a href="#">Контакты</a>
+                <a href="contacts.html">Контакты</a>
               </li>
             </ul>
           </div>
@@ -220,19 +221,19 @@
             <!-- menu -->
             <ul class="footer__menu">
               <li>
-                <a href="#">Выбрать картридж</a>
+                <a href="catalog.html">Заправить картридж</a>
               </li>
               <li>
-                <a href="#">Наши услуги</a>
+                <a href="catalog-card.html">Наши услуги</a>
               </li>
               <li>
-                <a href="#">Специальные предложения</a>
+                <a href="blog.html">Специальные предложения</a>
               </li>
               <li>
                 <a href="#">О компании</a>
               </li>
               <li>
-                <a href="#">Контакты</a>
+                <a href="contacts.html">Контакты</a>
               </li>
             </ul>
           </div>
@@ -240,29 +241,137 @@
             <div class="footer__copy">
               © 2017  ООО «ГдеТонер»
             </div>
-            <a href='#' class="footer__developer">
+            <a href='#' target='_blank' class="footer__developer">
               <span>Сделано в</span>
               <i class="ico ico-binardi"></i>
             </a>
           </div>
-
         </div>
       </div>
       <!-- FOOTER :: END -->
 
-
 		</div>
 
-
-
-		<div class="pop-up" id="pop-up-callback" js-pop-up>
+    <!-- POP UP :: START -->
+		<div class="pop-up" id="pop-up-courier" js-pop-up>
 			<div class="pop-up__insides" js-pop-up-insides>
-				<a href="#" class="pop-up__close" js-pop-up-btn-close>Закрыть</a>
+				<a href="#" class="pop-up__close" js-pop-up-btn-close>
+				  <i class="ico ico-close"></i>
+				</a>
+        <div class="pop-up__top">
+          <div class="pop-up__title">
+            Вызвать курьера
+          </div>
+          <div class="pop-up__description">
+            <div class="t-muted">Управление брендом, на первый взгляд, ускоряет сегмент рынка. </div>
+          </div>
+        </div>
+
+        <!-- form -->
+        <form action="">
+          <div class="pop-up__wrapper">
+            <div class="pop-up__col">
+              <div class="ui-group">
+                <label>Имя <span class="ui-group__required">*</span></label>
+                <input type="text" placeholder="Иванов Иван" class="ui-input">
+              </div>
+              <div class="ui-group">
+                <label>Адрес <span class="ui-group__required">*</span></label>
+                <input type="text" placeholder="" class="ui-input">
+              </div>
+              <div class="ui-group">
+                <label>Дата <span class="ui-group__required">*</span></label>
+                <input type="text" placeholder="" class="ui-input">
+              </div>
+            </div>
+            <div class="pop-up__col">
+              <div class="ui-group">
+                <label>Дата <span class="ui-group__required">*</span></label>
+                <input type="text" placeholder="Иванов Иван" class="ui-input">
+              </div>
+              <div class="ui-group">
+                <label>Название компании <span class="ui-group__required">*</span></label>
+                <input type="text" placeholder="" class="ui-input">
+              </div>
+              <div class="ui-group">
+                <label>Желаемое время <span class="ui-group__required">*</span></label>
+                <input type="text" placeholder="" class="ui-input">
+              </div>
+            </div>
+          </div>
+          <div class="ui-group">
+            <label for="">Что заправляем (перечислить технику или картриджи)</label>
+            <textarea rows='4' class="ui-input">Итак, ясно, что таргетирование стабилизирует культурный стратегический маркетинг. Организация практического взаимодействия обуславливает креатив. Стимулирование сбыта трансформирует баинг и селлинг.</textarea>
+          </div>
+          <div class="pop-up__cta">
+            <div class="ui-group">
+              <div class="ui-checkbox">
+                <input type="checkbox" name='check1' id='check1'>
+                <label for="check1">
+                  Согласен на обработку персональных данных
+                  <span>Ставя отметку, я даю свое согласие на обработку моих персональных данных в соответствии с законом №152-ФЗ «О персональных данных» от 27.07.2006 и принимая условия <a href="#">пользовательского соглашения</a>.</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type='submit' class="btn btn--primary">Отправить</button>
+        </form>
 
 			</div>
 		</div>
 
+    <!-- next -->
+    <div class="pop-up" id="pop-up-callback" js-pop-up>
+			<div class="pop-up__insides" js-pop-up-insides>
+				<a href="#" class="pop-up__close" js-pop-up-btn-close>
+				  <i class="ico ico-close"></i>
+				</a>
+        <div class="pop-up__top">
+          <div class="pop-up__title">
+            Заказать звонок
+          </div>
+          <div class="pop-up__description">
+            <div class="t-muted">Управление брендом, на первый взгляд, ускоряет сегмент рынка. </div>
+          </div>
+        </div>
 
+        <!-- form -->
+        <form action="">
+          <div class="pop-up__wrapper">
+            <div class="pop-up__col">
+              <div class="ui-group">
+                <label>Имя <span class="ui-group__required">*</span></label>
+                <input type="text" placeholder="Иванов Иван" class="ui-input">
+              </div>
+            </div>
+            <div class="pop-up__col">
+              <div class="ui-group">
+                <label>Телефон <span class="ui-group__required">*</span></label>
+                <input type="tel" placeholder="" class="ui-input">
+              </div>
+            </div>
+          </div>
+          <div class="ui-group">
+            <label for="">Комментарий</label>
+            <textarea rows='4' class="ui-input">Итак, ясно, что таргетирование стабилизирует культурный стратегический маркетинг. Организация практического взаимодействия обуславливает креатив. Стимулирование сбыта трансформирует баинг и селлинг.</textarea>
+          </div>
+          <div class="pop-up__cta">
+            <div class="ui-group">
+              <div class="ui-checkbox">
+                <input type="checkbox" name='check2' id='check2'>
+                <label for="check2">
+                  Согласен на обработку персональных данных
+                  <span>Ставя отметку, я даю свое согласие на обработку моих персональных данных в соответствии с законом №152-ФЗ «О персональных данных» от 27.07.2006 и принимая условия <a href="#">пользовательского соглашения</a>.</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type='submit' class="btn btn--primary">Отправить</button>
+        </form>
+
+			</div>
+		</div>
+    <!-- POP UP :: END -->
 
 		<!-- JS -->
 		<!--<script src="../public_html/local/templates/.default/bundle/dev/bundle.js"></script>-->
