@@ -88,11 +88,11 @@ const initCustomWidgets = window.initCustomWidgets = function () {
 		require.ensure(['./js/modules/tabs'], (require) => require('./js/modules/tabs')());
 	}
 
-  if (document.querySelector('a[href="#"]')) {
-		require.ensure(['./js/modules/preventDefault'], (require) => require('./js/modules/preventDefault')());
-	}
+  // if (document.querySelector('a[href="#"]')) {
+	// 	require.ensure(['./js/modules/preventDefault'], (require) => require('./js/modules/preventDefault')());
+	// }
 
-  if (document.querySelector('.hamburger')) {
+  if (document.querySelector('[js-mobile-menu]')) {
 		require.ensure(['./js/modules/hamburgerMobile'], (require) => require('./js/modules/hamburgerMobile')());
 	}
 

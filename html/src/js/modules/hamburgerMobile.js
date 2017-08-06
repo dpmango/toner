@@ -14,9 +14,9 @@ module.exports = function () {
 
   // declare variables
   const body = document.querySelector('body');
-  const hamburger = document.querySelector('.js-openMenu');
-  const hamburgerClose = document.querySelector('.js-closeMenu');
-  const mobileMenu = document.querySelector('.mobile-menu');
+  const hamburger = document.querySelector('[js-open-menu]');
+  const hamburgerClose = document.querySelector('[js-close-menu]');
+  const mobileMenu = document.querySelector('[js-mobile-menu]');
 
   const toggleClass = function(el, cl) {
     el.classList.toggle(cl)
