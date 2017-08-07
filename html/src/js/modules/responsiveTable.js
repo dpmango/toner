@@ -10,7 +10,7 @@ module.exports = function () {
 
 
 		const $table = $(self);
-		const titles = $table.find('thead th').get().map(item => $(item).text());
+		const titles = $table.find('thead td').get().map(item => $(item).text());
 
 
 

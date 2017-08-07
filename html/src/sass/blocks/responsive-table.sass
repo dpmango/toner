@@ -1,0 +1,28 @@
+@import ../core/variables
+@import ../core/mixins
+
+.responsive-table
+  & thead
+    +r($s)
+      display: none
+
+  & tbody
+    +r($s)
+      display: block
+
+    & tr
+      +r($s)
+        display: block
+
+      & td
+        +r($s)
+          display: block
+
+        &:before
+          +r($s)
+            content: attr(data-title)
+            display: block
+            vertical-align: top
+            width: 100%
+            color: $colorMuted
+            font-weight: 700

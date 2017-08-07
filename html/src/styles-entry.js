@@ -16,6 +16,7 @@ require("./sass/blocks/footer-sticky.scss");
 require("./sass/blocks/pop-up.sass");
 require("./sass/blocks/form-error.scss");
 require("./sass/blocks/page.scss");
+require("./sass/blocks/responsive-table.sass");
 
 require("./sass/blocks/header.sass");
 require("./sass/blocks/mobile-menu.sass");
