@@ -4,7 +4,7 @@
 
 .price-table
   background: #fafafa
-  padding: 60px 0 80px
+  padding: 60px 0
   &--no-bg
     background: transparent
     padding-top: 20px
@@ -22,14 +22,29 @@
     tbody
       font-weight: 700
   &__no-results
-    padding: 20px 0
+    padding: 10px 0
     border-top: 1px solid #cdcdcd
     border-bottom: 1px solid #cdcdcd
     span
       display: inline-block
-      margin-right: 30px
       font-weight: 700
       font-size: 16px
+      line-height: 1.2
+      margin: 10px 30px 10px 0
+    .btn
+      margin: 10px 0px
+
++r($l)
+  .price-table
+    padding: 50px 0 40px 0
+
++r($m)
+  .price-table
+    padding: 40px 0 30px 0
+    &__no-results
+      span
+        font-size: 14px
+
 
 +r($s)
   .price-table

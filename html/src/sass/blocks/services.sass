@@ -123,6 +123,19 @@
           max-width: 100%
           flex: 0 1 100%
           margin-left: 0
+    &--short
+      .services
+        &__wrapper
+          flex-wrap: nowrap
+        &__right
+          margin-top: 0
+          flex: 0 0 245px
+          margin-left: 20px
+          .blue-link span
+            flex-shrink: 1
+            border-bottom: 0
+            text-decoration: underline
+            line-height: 1.5
     &__wrapper
       margin-top: 30px
       flex-wrap: wrap
@@ -153,6 +166,8 @@
           margin-right: -15px
         &__right
           margin-top: 40px
+    &--short
+      display: none
 
   .manufacturer-list
     a
