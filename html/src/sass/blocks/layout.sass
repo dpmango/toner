@@ -2,16 +2,20 @@
 @import "../core/mixins"
 
 
+
+
 body
   margin: 0
   &.locked
     height: 100vh
     overflow: hidden
     pointer-events: none
-    // &::after
-    //   display: inline-block
-    //   position: absolute 0
-    //   background: #000
+
+h1,h2,h3,h4,h5
+  margin-bottom: 0.5em
+
+b,bold
+  font-weight: 700
 
 .blue-link
   display: flex
@@ -25,10 +29,10 @@ body
     border-bottom: 1px solid rgba($colorBlue, .5)
     color: $colorBlue
     transition: all $transitionSpeed $ease
-  &:hover
+  body:not(.mobile) &:hover
     span
       border-color: transparent
-      color: $colorPink
+      color: #0097cf
 
 .h1-title
   font-weight: 700
@@ -139,3 +143,11 @@ table
       width: 5px
       height: 5px
       background: $colorBlue
+
++r($m)
+  .ul-list
+    font-size: 16px
+
++r($s)
+  .ul-list
+    font-size: 14px

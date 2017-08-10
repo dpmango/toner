@@ -9,39 +9,120 @@
     margin-right: -15px
   &__card
     flex: 0 1 16.6%
-    padding-left: 15px
 
 .card-similar
   display: inline-block
+  min-width: 0
+  padding-left: 15px
+  padding-right: 15px
   &__image
     position: relative
     overflow: hidden
     height: 210px
+    display: block
+    &::after, &::before
+      display: inline-block
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      opacity: 0
+      transition: all $transitionSpeed $ease
+    &::after
+      z-index: 2
+      background: rgba(#51525c, .75) url('../../img/icons/zoom@2x.png') no-repeat center
+      background-size: 40px 40px
+      transform: translate3d(0,100%,0)
+    &::before
+      z-index: 3
+      background: url('../../img/bg-overlay@2x.png') no-repeat center
+      background-size: 100% 100%
     img
       position: absolute
       top: 50%
       left: 50%
+      z-index: 1
       transform: translate(-50%,-50%)
       min-width: 100%
       min-height: 100%
       width: auto
       height: auto
       transition: transform $transitionSpeed $ease
+    body:not(.mobile) &:hover
+      &::after
+        opacity: 1
+        transform: translate3d(0,0%,0)
+      &::before
+        opacity: 1
+      img
+        transform: translate(-50%,-50%) scale(1.05)
   &__title
+    display: block
     margin-top: 30px
     font-size: 16px
     font-weight: 700
-    line-height: 1.7
+    line-height: 1.67
     text-decoration: underline
     transition: color $transitionSpeed $ease
+    body:not(.mobile) &:hover
+      color: $colorBlue
   &__description
     font-size: 16px
+    line-height: 1.67
     font-weight: 300
     color: $colorMuted
     margin-top: 5px
-  &:hover
-    .card-similar__image
-      img
-        transform: translate(-50%,-50%) scale(1.1)
-    .card-similar__title
-      color: $colorBlue
+
+
++r($xl)
+  .similar
+    margin-bottom: 50px
+  .card-similar
+    &__image
+      height: 160px
+    &__title
+      margin-top: 25px
+
++r($l)
+  .similar
+    &__list
+      margin-left: -10px
+      margin-right: -10px
+  .card-similar
+    padding-left: 10px
+    padding-right: 10px
+    &__image
+      height: 120px
+
++r($m)
+  .similar
+    margin-bottom: 35px
+  .card-similar
+    flex: 0 1 25%
+    &:nth-child(5), &:nth-child(6)
+      display: none
+    &__image
+      height: 160px
+    &__title
+      font-size: 15px
+    &__description
+      font-size: 15px
+
++r($s)
+  .similar
+    margin-bottom: 0px
+    &__list
+      flex-wrap: wrap
+  .card-similar
+    flex: 0 1 50%
+    margin-bottom: 40px
+    &__image
+      height: 140px
+    &__title
+      font-size: 14px
+      line-height: 1.5
+    &__description
+      font-size: 14px
+      line-height: 1.5

@@ -47,16 +47,16 @@
         <div class="container">
           <div class="header__wrapper">
             <a href='#' class="header__logo">
-              <i class="ico ico-logo"></i>
+              <i class="ico ico-logo">Gde Toner</i>
             </a>
             <!-- header center -->
             <div class="header__center">
               <div class="header__search search-header">
-                <div class="search-header__label">
+                <label for='quick-search' class="search-header__label">
                   Быстрый поиск стоимости услуг
-                </div>
-                <form class="search-header__box">
-                  <input class='ui-input' type="text" placeholder="введите наименование устройства или картриджа">
+                </label>
+                <form class="search-header__box" js-quick-search>
+                  <input class='ui-input' id='quick-search' type="text" placeholder="введите наименование устройства или картриджа" data-quick-search-url="src/json/quick-search.json" js-quick-search-entry>
                   <button type='submit'>
                     <i class="ico ico-search"></i>
                   </button>
@@ -316,7 +316,7 @@
       </div>
       <!-- TEXT BLOCK :: END -->
       <!-- FOOTER :: START -->
-      <div class="footer">
+      <div class="footer" js-footer-sticky>
         <div class="cmyk-line">
           <div class="cmyk-line__line cmyk-line__line--blue"></div>
           <div class="cmyk-line__line cmyk-line__line--yellow"></div>
@@ -382,7 +382,7 @@
             </div>
             <a href='#' target='_blank' class="footer__developer">
               <span>Сделано в</span>
-              <i class="ico ico-binardi"></i>
+              <i class="ico ico-binardi">binardi</i>
             </a>
           </div>
         </div>
@@ -420,7 +420,7 @@
               </div>
               <div class="ui-group">
                 <label>Дата <span class="ui-group__required">*</span></label>
-                <input type="date" placeholder="" class="ui-input ui-input--date">
+                <input type="text" placeholder="" class="ui-input ui-input--date" js-datepicker>
               </div>
             </div>
             <div class="pop-up__col">

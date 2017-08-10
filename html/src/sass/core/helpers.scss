@@ -43,7 +43,6 @@ html {
 
 /* Overlay */
 .overlay {
-	display: none;
 	position: fixed;
 	z-index: 1000;
 	top: -100%;
@@ -52,9 +51,13 @@ html {
 	left: -100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	cursor: pointer;
+	transition: 0.2s;
+	visibility: hidden;
+	opacity: 0;
 
 	&.active {
-		display: block;
+		visibility: visible;
+		opacity: 1;
 	}
 }
 /* Overlay-END */
@@ -66,17 +69,27 @@ input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="search"],
+input[type="date"],
 textarea {
 	-webkit-appearance: none;
 
 	&::-ms-clear {
 		display: none;
 	}
+  &::-webkit-clear-button{
+    display: none;
+    -webkit-appearance: none;
+  }
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  display: none
 }
 
 input[type="number"] {

@@ -98,8 +98,8 @@ module.exports = function () {
 
 			fillFormData(formData, dataForSend);
 
-			xhr.open('POST', url);
-			// xhr.open('GET', url);
+			// xhr.open('POST', url);
+			xhr.open('GET', url);
 			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 			xhr.onreadystatechange = () => {
 				if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
@@ -161,16 +161,7 @@ module.exports = function () {
 			Array.from(dataElements).forEach((self) => {
 				elements += `
 						<li class="quick-search__item" data-href="${self.link}">
-							<div class="quick-search__row">
-								<div class="quick-search__col-1">
-									<a href="${self.link}" class="quick-search__link"><img src="${self.image}" alt="" class="quick-search__image"></a>
-								</div>
-	
-								<div class="quick-search__col-2">
-									<a href="${self.link}" class="quick-search__name">${self.name}</a>
-									<span class="quick-search__code">${self.code}</span>
-								</div>
-							</div>
+							<a href="${self.link}" class="quick-search__name">${self.name}</a>
 						</li>
 				`;
 			});

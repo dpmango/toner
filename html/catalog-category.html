@@ -47,16 +47,16 @@
         <div class="container">
           <div class="header__wrapper">
             <a href='#' class="header__logo">
-              <i class="ico ico-logo"></i>
+              <i class="ico ico-logo">Gde Toner</i>
             </a>
             <!-- header center -->
             <div class="header__center">
               <div class="header__search search-header">
-                <div class="search-header__label">
+                <label for='quick-search' class="search-header__label">
                   Быстрый поиск стоимости услуг
-                </div>
-                <form class="search-header__box">
-                  <input class='ui-input' type="text" placeholder="введите наименование устройства или картриджа">
+                </label>
+                <form class="search-header__box" js-quick-search>
+                  <input class='ui-input' id='quick-search' type="text" placeholder="введите наименование устройства или картриджа" data-quick-search-url="src/json/quick-search.json" js-quick-search-entry>
                   <button type='submit'>
                     <i class="ico ico-search"></i>
                   </button>
@@ -185,7 +185,7 @@
       <!-- HEADING :: END -->
 
       <!-- SERVICES :: START -->
-      <div class="services services--inner services--short">
+      <div class="services services--inner services--short" data-teleport-width="768" data-teleport-sign="<" data-teleport-new-place="#services" js-teleport>
         <div class="container">
           <div class="services__wrapper">
             <div class="services__left">
@@ -265,19 +265,19 @@
       <!-- SERVICES :: END -->
 
       <!-- TABLE :: START -->
-      <div class="price-table">
+      <div class="price-table" js-magic-filter>
         <div class="container">
           <div class="price-table__top">
             <div class="t-primary">Введите наименование устройства или картриджа</div>
             <div class="t-muted">Просто начните набирать часть модели картриджа или принтера. Например: ML-1650</div>
             <form class="search-header__box">
-              <input class='ui-input' type="text" placeholder="">
+              <input class='ui-input' type="text" placeholder="" js-magic-filter-input>
               <button type='submit'>
                 <i class="ico ico-search"></i>
               </button>
             </form>
           </div>
-          <table class='responsive-table responsive-table--catalog' js-responsive-table>
+          <table class='responsive-table responsive-table--category' js-responsive-table>
             <thead>
               <tr>
                 <td>Картридж</td>
@@ -291,101 +291,134 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>ML-1210D3</td>
-                <td>2500 стр</td>
-                <td>ML-1010, 1020, 1210, 1220, 1250, 1430, (RX3110)</td>
-                <td>от 400 Р</td>
-                <td>699 Р</td>
-                <td>1200 Р</td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>заказать</span>
-                  </a>
-                </td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>подробнее</span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>ML-1210D3</td>
-                <td>3000 стр</td>
-                <td>ML-1010, 1020, 1250, 1430, (RX3110)</td>
-                <td>от 400 Р</td>
-                <td>699 Р</td>
-                <td>1200 Р</td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>заказать</span>
-                  </a>
-                </td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>подробнее</span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>ML-121033D3</td>
-                <td>4500 стр</td>
-                <td>ML-1010, 1020, 1210, 1220, 1250, 1430, (RX3110)</td>
-                <td>от 400 Р</td>
-                <td>6949 Р</td>
-                <td>1200 Р</td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>заказать</span>
-                  </a>
-                </td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>подробнее</span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>ML-1210D3</td>
-                <td>2500 стр</td>
-                <td>ML-1010, 1020, 1210, 1220, 1250, 1430</td>
-                <td>от 400 Р</td>
-                <td>99 Р</td>
-                <td>100 Р</td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>заказать</span>
-                  </a>
-                </td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>подробнее</span>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>ML-1210D3</td>
-                <td>2500 стр</td>
-                <td>ML-1010, 1020, 1210, 1220 </td>
-                <td>от 400 Р</td>
-                <td>699 Р</td>
-                <td>1200 Р</td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>заказать</span>
-                  </a>
-                </td>
-                <td>
-                  <a href="#" class="blue-link">
-                    <span>подробнее</span>
-                  </a>
-                </td>
-              </tr>
+            <tr data-name="qweqwe" js-magic-filter-element>
+              <td>ML-1210D3</td>
+              <td>2500 стр</td>
+              <td>ML-1010, 1020, 1210, 1220, 1250, 1430, (RX3110)</td>
+              <td>от 400 Р</td>
+              <td>699 Р</td>
+              <td>1200 Р</td>
+              <td>
+                <a href="#" class="blue-link">
+                  <span>заказать</span>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="blue-link">
+                  <span>подробнее</span>
+                </a>
+              </td>
+            </tr>
+            <tr data-name="fasd" js-magic-filter-element>
+              <td>ML-1210D3</td>
+              <td>2500 стр</td>
+              <td>ML-1010, 1020, 1210, 1220, 1250, 1430, (RX3110)</td>
+              <td>от 400 Р</td>
+              <td>699 Р</td>
+              <td>1200 Р</td>
+              <td>
+                <a href="#" class="blue-link">
+                  <span>заказать</span>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="blue-link">
+                  <span>подробнее</span>
+                </a>
+              </td>
+            </tr>
+            <tr data-name="qwewqe" js-magic-filter-element>
+              <td>ML-1210D3</td>
+              <td>2500 стр</td>
+              <td>ML-1010, 1020, 1210, 1220, 1250, 1430, (RX3110)</td>
+              <td>от 400 Р</td>
+              <td>699 Р</td>
+              <td>1200 Р</td>
+              <td>
+                <a href="#" class="blue-link">
+                  <span>заказать</span>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="blue-link">
+                  <span>подробнее</span>
+                </a>
+              </td>
+            </tr>
+            <tr data-name="sasdasasd" js-magic-filter-element>
+              <td>ML-1210D3</td>
+              <td>2500 стр</td>
+              <td>ML-1010, 1020, 1210, 1220, 1250, 1430, (RX3110)</td>
+              <td>от 400 Р</td>
+              <td>699 Р</td>
+              <td>1200 Р</td>
+              <td>
+                <a href="#" class="blue-link">
+                  <span>заказать</span>
+                </a>
+              </td>
+              <td>
+                <a href="#" class="blue-link">
+                  <span>подробнее</span>
+                </a>
+              </td>
+            </tr>
             </tbody>
           </table>
+          <div class="price-table__no-results hidden" js-magicFilter-not-found>
+            <span>Поиск не дал результатов. Оставьте заявку - мы всё перепроверим и свяжемся с вами</span>
+            <a href="#" class="btn btn--ghost">Оставить заявку</a>
+          </div>
         </div>
       </div>
       <!-- TABLE :: END -->
+
+      <div id="services"></div>
+
+      <!-- js-teleport-start -->
+      <script>
+          [].slice.call(document.querySelectorAll('[js-teleport]')).forEach(function (self) {
+              var wrapper     = self;
+              var width		= +wrapper.dataset['teleportWidth'];
+              var sign		= wrapper.dataset['teleportSign'];
+              var newPlace 	= document.querySelector(wrapper.dataset['teleportNewPlace']);
+
+              var windowWidth = window.innerWidth;
+
+
+
+              window.addEventListener('resize', function () {
+                  if (windowWidth === window.innerWidth) return;
+
+                  windowWidth = window.innerWidth;
+
+                  teleport();
+              });
+
+
+
+              function teleport() {
+                  var condition;
+
+                  if (sign === '<') {
+                      condition = windowWidth < width;
+                  } else if (sign === '>') {
+                      condition = windowWidth > width;
+                  }
+
+                  if (condition) {
+                      if (newPlace.children.length) return;
+                      newPlace.appendChild(wrapper.children[0]);
+                  } else {
+                      if (wrapper.children.length) return;
+                      wrapper.appendChild(newPlace.children[0]);
+                  }
+              }
+
+              teleport();
+          });
+      </script>
+      <!-- js-teleport-end -->
 
       <!-- TEXT BLOCK :: START -->
       <div class="text-block text-block--no-pic">
@@ -401,7 +434,7 @@
       </div>
       <!-- TEXT BLOCK :: END -->
       <!-- FOOTER :: START -->
-      <div class="footer">
+      <div class="footer" js-footer-sticky>
         <div class="cmyk-line">
           <div class="cmyk-line__line cmyk-line__line--blue"></div>
           <div class="cmyk-line__line cmyk-line__line--yellow"></div>
@@ -467,7 +500,7 @@
             </div>
             <a href='#' target='_blank' class="footer__developer">
               <span>Сделано в</span>
-              <i class="ico ico-binardi"></i>
+              <i class="ico ico-binardi">binardi</i>
             </a>
           </div>
         </div>
@@ -505,7 +538,7 @@
               </div>
               <div class="ui-group">
                 <label>Дата <span class="ui-group__required">*</span></label>
-                <input type="date" placeholder="" class="ui-input ui-input--date">
+                <input type="text" placeholder="" class="ui-input ui-input--date" js-datepicker>
               </div>
             </div>
             <div class="pop-up__col">

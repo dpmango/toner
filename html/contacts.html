@@ -47,16 +47,16 @@
         <div class="container">
           <div class="header__wrapper">
             <a href='#' class="header__logo">
-              <i class="ico ico-logo"></i>
+              <i class="ico ico-logo">Gde Toner</i>
             </a>
             <!-- header center -->
             <div class="header__center">
               <div class="header__search search-header">
-                <div class="search-header__label">
+                <label for='quick-search' class="search-header__label">
                   Быстрый поиск стоимости услуг
-                </div>
-                <form class="search-header__box">
-                  <input class='ui-input' type="text" placeholder="введите наименование устройства или картриджа">
+                </label>
+                <form class="search-header__box" js-quick-search>
+                  <input class='ui-input' id='quick-search' type="text" placeholder="введите наименование устройства или картриджа" data-quick-search-url="src/json/quick-search.json" js-quick-search-entry>
                   <button type='submit'>
                     <i class="ico ico-search"></i>
                   </button>
@@ -218,22 +218,22 @@
               <div class="form-contact__wrapper">
                 <div class="form-contact__left">
                   <div class="ui-group">
-                    <label>Имя и фамилия</label>
-                    <input type="text" placeholder="Иванов Иван" class="ui-input">
+                    <label for='name'>Имя и фамилия</label>
+                    <input type="text" name='name' id='name' placeholder="Иванов Иван" class="ui-input">
                   </div>
                   <div class="ui-group">
-                    <label>Контактный телефон</label>
-                    <input type="tel" placeholder="8 (999) 999-999-999" class="ui-input">
+                    <label for='tel'>Контактный телефон</label>
+                    <input type="tel" name='tel' id='tel' placeholder="8 (999) 999-999-999" class="ui-input">
                   </div>
                   <div class="ui-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="binardi@gmail.com" class="ui-input">
+                    <label for='email'>Email</label>
+                    <input type="email" name='email' id='email' placeholder="binardi@gmail.com" class="ui-input">
                   </div>
                 </div>
                 <div class="form-contact__right">
                   <div class="ui-group">
-                    <label>Вопрос</label>
-                    <textarea class="ui-input">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                    <label for='question'>Вопрос</label>
+                    <textarea class="ui-input" name='question' id='question'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
                   </div>
                 </div>
               </div>
@@ -295,7 +295,7 @@
       <!-- CONTACT MAP :: END -->
 
       <!-- FOOTER :: START -->
-      <div class="footer">
+      <div class="footer" js-footer-sticky>
         <div class="cmyk-line">
           <div class="cmyk-line__line cmyk-line__line--blue"></div>
           <div class="cmyk-line__line cmyk-line__line--yellow"></div>
@@ -361,7 +361,7 @@
             </div>
             <a href='#' target='_blank' class="footer__developer">
               <span>Сделано в</span>
-              <i class="ico ico-binardi"></i>
+              <i class="ico ico-binardi">binardi</i>
             </a>
           </div>
         </div>
@@ -399,7 +399,7 @@
               </div>
               <div class="ui-group">
                 <label>Дата <span class="ui-group__required">*</span></label>
-                <input type="date" placeholder="" class="ui-input ui-input--date">
+                <input type="text" placeholder="" class="ui-input ui-input--date" js-datepicker>
               </div>
             </div>
             <div class="pop-up__col">

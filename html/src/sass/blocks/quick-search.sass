@@ -1,0 +1,49 @@
+@import ../core/variables
+@import ../core/mixins
+
+
+.quick-search
+  position: relative
+
+  &.hidden
+    display: none
+
+  &__list
+    position: absolute
+    z-index: 100
+    top: 2px
+    width: calc(100% - 2px)
+    margin: 0
+    margin-left: 1px
+    padding: 5px 20px
+    list-style: none
+    background-color: #fff
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08)
+
+  &__item
+    display: block
+    border-bottom: 1px solid #e3e3e3
+
+    &:last-of-type
+      border-bottom: 0
+
+    &.active
+      position: relative
+      color: $colorBlue
+
+
+  &__name
+    display: block
+    font-size: 16px
+    font-weight: 500
+    color: inherit
+    text-decoration: none
+    padding: 18px 0
+    transition: color $transitionSpeed $ease
+    body:not(.mobile) body:not(.mobile) &:hover
+      color: $colorBlue
+    +r($m)
+      font-size: 15px
+      padding: 12px 0
+    +r($s)
+      font-size: 14px

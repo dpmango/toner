@@ -52,11 +52,12 @@
   display: flex
   flex-wrap: wrap
   margin: 20px -10px 0 -10px
-  a
-    flex: 0 1 25%
+  &__item
+    flex: 0 1 calc(25% - 20px)
     margin: 12px 0px
     padding-left: 10px
     padding-right: 10px
+  a
     cursor: pointer
     span
       font-weight: 300
@@ -64,7 +65,7 @@
       border-bottom: 1px solid rgba($colorBlue, .5)
       color: $colorBlue
       transition: all $transitionSpeed $ease
-    &:hover
+    body:not(.mobile) &:hover
       span
         border-color: transparent
         color: $colorPink
@@ -106,8 +107,8 @@
         padding: 50px 20px 30px 40px
 
   .manufacturer-list
-    a
-      flex: 0 1 33.3%
+    &__item
+      flex: 0 1 calc(33.3% - 20px)
 
 +r($m)
   .services
@@ -152,8 +153,8 @@
 
   .manufacturer-list
     margin-top: 10px
-    a
-      flex: 0 1 25%
+    &__item
+      flex: 0 1 calc(25% - 20px)
 
 +r($s)
   .services
@@ -170,5 +171,5 @@
       display: none
 
   .manufacturer-list
-    a
-      flex: 0 1 50%
+    &__item
+      flex: 0 1 calc(50% - 20px)

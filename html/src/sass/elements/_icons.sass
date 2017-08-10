@@ -25,40 +25,34 @@
       height: 50px
 
   &-search
-    background-image: url('../../img/icons/search@2x.png')
+    background-image: svg-load('../../img/icons/svg/Search.svg', fill=$fontColor)
     width: 18px
     height: 18px
 
-  &-checkmark-blue
-    background-image: url('../../img/icons/checkmark-blue@2x.png')
+  &-checkmark-blue, &-checkmark-yellow, &-checkmark-pink
     width: 30px
     height: 30px
     +r($s)
       width: 20px
       height: 20px
+
+  &-checkmark-blue
+    background-image: svg-load('../../img/icons/svg/Checked.svg', fill=$colorBlue)
 
   &-checkmark-yellow
-    background-image: url('../../img/icons/checkmark-yellow@2x.png')
-    width: 30px
-    height: 30px
-    +r($s)
-      width: 20px
-      height: 20px
+    background-image: svg-load('../../img/icons/svg/Checked.svg', fill=$colorYellow)
+
   &-checkmark-pink
-    background-image: url('../../img/icons/checkmark-pink@2x.png')
-    width: 30px
-    height: 30px
-    +r($s)
-      width: 20px
-      height: 20px
+    background-image: svg-load('../../img/icons/svg/Checked.svg', fill=$colorPink)
+
 
   &-courier
-    background-image: url('../../img/icons/courier@2x.png')
+    background-image: svg-load('../../img/icons/svg/Courier.svg', fill=$fontColor)
     width: 20px
     height: 20px
 
   &-document
-    background-image: url('../../img/icons/document@2x.png')
+    background-image: svg-load('../../img/icons/svg/Document.svg', fill=$fontColor)
     width: 15px
     height: 19px
 
@@ -76,7 +70,7 @@
     height: 79px
 
   &-arrow
-    background-image: url('../../img/icons/arrow@2x.png')
+    background-image: svg-load('../../img/icons/svg/Arrow.svg', fill=$fontColor)
     width: 32px
     height: 23px
 
@@ -86,6 +80,6 @@
     height: 18px
 
   &-close
-    background-image: url('../../img/icons/close@2x.png')
+    background-image: svg-load('../../img/icons/svg/Cross.svg')
     width: 24px
     height: 24px

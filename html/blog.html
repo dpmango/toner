@@ -47,16 +47,16 @@
         <div class="container">
           <div class="header__wrapper">
             <a href='#' class="header__logo">
-              <i class="ico ico-logo"></i>
+              <i class="ico ico-logo">Gde Toner</i>
             </a>
             <!-- header center -->
             <div class="header__center">
               <div class="header__search search-header">
-                <div class="search-header__label">
+                <label for='quick-search' class="search-header__label">
                   Быстрый поиск стоимости услуг
-                </div>
-                <form class="search-header__box">
-                  <input class='ui-input' type="text" placeholder="введите наименование устройства или картриджа">
+                </label>
+                <form class="search-header__box" js-quick-search>
+                  <input class='ui-input' id='quick-search' type="text" placeholder="введите наименование устройства или картриджа" data-quick-search-url="src/json/quick-search.json" js-quick-search-entry>
                   <button type='submit'>
                     <i class="ico ico-search"></i>
                   </button>
@@ -163,84 +163,84 @@
         <div class="container">
           <div class="promo__list">
             <!-- card -->
-            <a href='#' class="promo-card">
-              <div class="promo-card__image">
+            <div class="promo-card">
+              <a href="#" class="promo-card__image">
                 <img src="./src/img/tmp/promoCard_1.png" srcset='./src/img/tmp/promoCard_1@2x.png 2x' alt="">
-              </div>
-              <div class="promo-card__title">
+              </a>
+              <a href="#" class="promo-card__title">
                 При заказе пяти картриджей напиток в подарок
-              </div>
+              </a>
               <div class="promo-card__description">
                 Рейтинг без оглядки на авторитеты усиливает связанный пак-шот. Маркетинговая активность регулярно притягивает межличностный поведенческий таргетинг ...
               </div>
-            </a>
+            </div>
             <!-- card -->
-            <a href='#' class="promo-card">
-              <div class="promo-card__image">
+            <div class="promo-card">
+              <a href="#" class="promo-card__image">
                 <img src="./src/img/tmp/promoCard_2.png" srcset='./src/img/tmp/promoCard_2@2x.png 2x' alt="">
-              </div>
-              <div class="promo-card__title">
+              </a>
+              <a href="#" class="promo-card__title">
                 Заправка трех картриджей всего 999 при заказе с сайта
-              </div>
+              </a>
               <div class="promo-card__description">
                 Сервисная стратегия оправдывает стратегический маркетинг. Концепция новой стратегии, как следует из вышесказанного, выражена наиболее полно ...
               </div>
-            </a>
+            </div>
             <!-- card -->
-            <a href='#' class="promo-card">
-              <div class="promo-card__image">
+            <div class="promo-card">
+              <a href="#" class="promo-card__image">
                 <img src="./src/img/tmp/promoCard_3.png" srcset='./src/img/tmp/promoCard_3@2x.png 2x' alt="">
-              </div>
-              <div class="promo-card__title">
+              </a>
+              <a href="#" class="promo-card__title">
                 Скидка 20% на вторую заправку картриджа у нас
-              </div>
+              </a>
               <div class="promo-card__description">
                 Продвижение проекта однородно консолидирует опрос. Построение бренда амбивалентно. Медиапланирование, в рамках сегодняшних воззрений, концентрирует ...
               </div>
-            </a>
+            </div>
             <!-- card -->
-            <a href='#' class="promo-card">
-              <div class="promo-card__image">
+            <div class="promo-card">
+              <a href="#" class="promo-card__image">
                 <img src="./src/img/tmp/promoCard_4.png" srcset='./src/img/tmp/promoCard_4@2x.png 2x' alt="">
-              </div>
-              <div class="promo-card__title">
+              </a>
+              <a href="#" class="promo-card__title">
                 Счастливые часы каждый  день с 19.00 до 20.00
-              </div>
+              </a>
               <div class="promo-card__description">
                 Тем не менее, эволюция мерчандайзинга сознательно уравновешивает сублимированный баинг и селлинг. Спонсорство специфицирует пак-шот. Рекламный бриф неестественно ...
               </div>
-            </a>
+            </div>
             <!-- card -->
-            <a href='#' class="promo-card">
-              <div class="promo-card__image">
+            <div class="promo-card">
+              <a href="#" class="promo-card__image">
                 <img src="./src/img/tmp/promoCard_1.png" srcset='./src/img/tmp/promoCard_1@2x.png 2x' alt="">
-              </div>
-              <div class="promo-card__title">
+              </a>
+              <a href="#" class="promo-card__title">
                 При заказе пяти картриджей напиток в подарок
-              </div>
+              </a>
               <div class="promo-card__description">
                 Рейтинг без оглядки на авторитеты усиливает связанный пак-шот. Маркетинговая активность регулярно притягивает межличностный поведенческий таргетинг ...
               </div>
-            </a>
+            </div>
             <!-- card -->
-            <a href='#' class="promo-card">
-              <div class="promo-card__image">
+            <div class="promo-card">
+              <a href="#" class="promo-card__image">
                 <img src="./src/img/tmp/promoCard_2.png" srcset='./src/img/tmp/promoCard_2@2x.png 2x' alt="">
-              </div>
-              <div class="promo-card__title">
+              </a>
+              <a href="#" class="promo-card__title">
                 Заправка трех картриджей всего 999 при заказе с сайта
-              </div>
+              </a>
               <div class="promo-card__description">
                 Сервисная стратегия оправдывает стратегический маркетинг. Концепция новой стратегии, как следует из вышесказанного, выражена наиболее полно ...
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
       <!-- PROMO :: END -->
 
       <!-- FOOTER :: START -->
-      <div class="footer">
+      <div class="footer" js-footer-sticky>
         <div class="cmyk-line">
           <div class="cmyk-line__line cmyk-line__line--blue"></div>
           <div class="cmyk-line__line cmyk-line__line--yellow"></div>
@@ -306,7 +306,7 @@
             </div>
             <a href='#' target='_blank' class="footer__developer">
               <span>Сделано в</span>
-              <i class="ico ico-binardi"></i>
+              <i class="ico ico-binardi">binardi</i>
             </a>
           </div>
         </div>
@@ -344,7 +344,7 @@
               </div>
               <div class="ui-group">
                 <label>Дата <span class="ui-group__required">*</span></label>
-                <input type="date" placeholder="" class="ui-input ui-input--date">
+                <input type="text" placeholder="" class="ui-input ui-input--date" js-datepicker>
               </div>
             </div>
             <div class="pop-up__col">

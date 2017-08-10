@@ -2,7 +2,18 @@
 
 .form-error {
 
-	& .form__error {
-		display: block;
+	& .entry {
+
+		&__element {
+
+			& input,
+			& textarea {
+				border-color: toamto;
+			}
+		}
+
+		&__error {
+			display: block;
+		}
 	}
 }

@@ -15,7 +15,7 @@ module.exports = function () {
 
 		document.body.classList.add('styles-for-footer-sticky');
 
-		window.addEventListener('resize', () => changeMarginForClass());
+		window.addEventListener('resize', changeMarginForClass);
 
 
 
@@ -23,7 +23,7 @@ module.exports = function () {
 			const heightFooter  = wrapper.offsetHeight;
 			const styles		= `
 				<style id="styles-for-footer-sticky">
-					.styles-for-footer-sticky { 
+					.styles-for-footer-sticky {
 						margin-bottom: ${heightFooter}px;
 					}
 				</style>

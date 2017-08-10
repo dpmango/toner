@@ -7,6 +7,7 @@
   -webkit-apperance: none
   display: inline-block
   cursor: pointer
+  vertical-align: middle
   transition: all $transitionSpeed $ease
   &:focus
     outline: none
@@ -33,16 +34,16 @@
     text-transform: uppercase
     &:hover
       color: white
-      background: $colorPink
+      background: #0082b6
   &--gradient
     position: relative
     z-index: 1
     font-weight: 500
-    padding: 15px 20px
+    padding: 16px 20px
     font-size: 16px
     line-height: 1
     color: white
-    border: 1px solid transparent
+    border: 0px solid transparent
     border-radius: 4px
     text-transform: uppercase
     overflow: hidden
@@ -53,18 +54,29 @@
       top: 0
       left: 0
       z-index: 1
-      width: 200%
+      width: 100%
       height: 100%
-      transform: translate3d(-50%,0,0)
-      background: linear-gradient(to right, $colorBlue 0%, #faa900 50%, $colorPink 100%)
+      background: linear-gradient(to left, $colorBlue 0%, #faa900 50%, $colorPink 100%)
       transition: all $transitionSpeed $ease
+    &::before
+      display: inline-block
+      content: ' '
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      z-index: 2
+      background: rgba(black, .4)
+      opacity: 0
+      transition: opacity $transitionSpeed $ease
     span
       position: relative
-      z-index: 2
+      z-index: 3
     &:hover
       color: white
-      &::after
-        transform: translate3d(0,0,0)
+      &::before
+        opacity: 1
   &--block
     display: block
     width: 100%

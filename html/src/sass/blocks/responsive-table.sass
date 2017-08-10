@@ -26,9 +26,40 @@
             width: 100%
             color: $colorMuted
             font-weight: 700
+            
+  &--category
+
+    & tbody
+      
+      & tr
+        display: none
+
+        &.visible
+          display: table-row
+          
 
   &--catalog
+    td
+      &:nth-of-type(1)
+        width: 10%
+      &:nth-of-type(2)
+        width: 10%
+      &:nth-of-type(3)
+        width: auto
+      &:nth-of-type(4)
+        width: 10%
+      &:nth-of-type(5)
+        width: 10%
+      &:nth-of-type(6)
+        width: 10%
+      &:nth-of-type(7)
+        width: 90px
+      &:nth-of-type(8)
+        width: 90px
+
     +r($s)
+      td
+        width: auto !important
       tbody
         tr
           display: flex

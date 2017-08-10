@@ -16,11 +16,11 @@
       font-weight: 300
       font-size: 18px
       padding: 6px 5px
-      flex: 0 1 12.5%
+      flex: 0 1 calc(12.5% - 10px)
       color: white
       text-decoration: underline
       transition: color $transitionSpeed $ease
-      &:hover
+      body:not(.mobile) &:hover
         color: $colorYellow
         text-decoration: none
       &.active
@@ -34,15 +34,14 @@
     &__list
       a
         font-size: 16px
-        flex: 0 1 16.6%
+        flex: 0 1 calc(16.6% - 10px)
 
 +r($m)
   .head-nav
     &__list
       a
-        flex: 0 1 25%
+        flex: 0 1 calc(25% - 10px)
 
 +r($s)
   .head-nav
     display: none
-    

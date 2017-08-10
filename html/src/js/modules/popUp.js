@@ -2,7 +2,7 @@
 
 const moduleName = 'popUp';
 
-const moduleData    = {
+const moduleData = {
 	'windowScrollTop'  : undefined,
 	'htmlHeight' 	   : undefined
 };
@@ -60,6 +60,8 @@ module.exports = function () {
 
 		popUp.addEventListener('DOMNodeInserted', () => {
 			if (popUp.classList.contains('active')) {
+				putFocusFirstVisibleInput(popUpId);
+				loadImages(popUpId);
 				popUpCentering(popUpId);
 			}
 		});
@@ -68,7 +70,7 @@ module.exports = function () {
 
 		popUp.addEventListener('click', (event) => {
 			const element = event.target.closest('[js-pop-up-btn-close]');
-			if (!element) { return; }
+			if (!element) return;
 
 			event.preventDefault();
 			event.stopPropagation();
@@ -80,7 +82,7 @@ module.exports = function () {
 
 		popUp.addEventListener('click', (event) => {
 			const element = event.target;
-			if (element.closest('[js-pop-up-insides]')) { return; }
+			if (element.closest('[js-pop-up-insides]')) return;
 
 			event.stopPropagation();
 
@@ -101,7 +103,7 @@ module.exports = function () {
 
 		self.addEventListener('click', (event) => {
 			const element = event.target.closest('[js-pop-up-btn-open]');
-			if (!element) { return; }
+			if (!element) return;
 
 			event.preventDefault();
 
@@ -123,11 +125,11 @@ module.exports = function () {
 		popUp.classList.add('active');
 		overlay.classList.add('active');
 
+		putFocusFirstVisibleInput(popUpId);
 		loadImages(popUpId);
 		popUpCentering(popUpId);
-		putFocusFirstVisibleInput(popUpId);
 
-		body.style.overflowY = 'scroll';
+		if (checkOutScrollbar()) body.style.overflowY = 'scroll';
 
 		const styles = `
 				<style id="styles-for-pop-up">
@@ -150,19 +152,27 @@ module.exports = function () {
 
 
 
+	function checkOutScrollbar() {
+		return window.innerWidth > document.documentElement.clientWidth;
+	}
+
+
+
 	function putFocusFirstVisibleInput(popUpId) {
-		const popUp = document.querySelector(popUpId);
+		if (!(document.body.classList.contains('mobile'))) {
+			const popUp = document.querySelector(popUpId);
 
-		Array.from(popUp.querySelectorAll('input')).every((self) => {
-			const input = self;
+			Array.from(popUp.querySelectorAll('input')).every((self) => {
+				const input = self;
 
-			if (input.getAttribute('type') !== 'hidden' && input.value === '') {
-				input.focus();
-				return false;
-			} else {
-				return true;
-			}
-		});
+				if (input.getAttribute('type') !== 'hidden' && input.value === '') {
+					input.focus();
+					return false;
+				} else {
+					return true;
+				}
+			});
+		}
 	}
 
 
@@ -191,9 +201,7 @@ module.exports = function () {
 
 		const activePopUp = document.querySelector('[js-pop-up].active');
 
-		if (activePopUp) {
-			activePopUp.classList.remove('active');
-		}
+		!!activePopUp ? activePopUp.classList.remove('active') : undefined;
 
 		overlay.classList.remove('active');
 
@@ -208,17 +216,17 @@ module.exports = function () {
 		Array.from(document.querySelectorAll(popUpId)).forEach((self) => {
 			const popUp = self;
 
-			if (!popUp.querySelector('[js-pop-up-insides]')) { return; }
+			if (!popUp.querySelector('[js-pop-up-insides]')) return;
 
 			const popUpInsides       = popUp.querySelector('[js-pop-up-insides]');
 			const popUpInsidesHeight = popUpInsides.offsetHeight;
 			const windowHeight       = window.innerHeight;
 
 			if (windowHeight - 80 < popUpInsidesHeight) {
-				popUpInsides.style.marginTop 	  = '40px';
+				popUpInsides.style.marginTop 	= '40px';
 				popUpInsides.style.marginBottom = '40px';
 			} else {
-				popUpInsides.style.marginTop 	  = (windowHeight - popUpInsidesHeight) / 2 + 'px';
+				popUpInsides.style.marginTop 	= (windowHeight - popUpInsidesHeight) / 2 + 'px';
 				popUpInsides.style.marginBottom = (windowHeight - popUpInsidesHeight) / 2 + 'px';
 			}
 		});
@@ -228,7 +236,7 @@ module.exports = function () {
 
 	function updateModuleData() {
 		moduleData.windowScrollTop = (document.documentElement.scrollTop || document.body.scrollTop);
-		moduleData.htmlHeight 	 = document.querySelector('html').offsetHeight;
+		moduleData.htmlHeight 	   = document.querySelector('html').offsetHeight;
 	}
 
 

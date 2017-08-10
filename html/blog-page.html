@@ -47,16 +47,16 @@
         <div class="container">
           <div class="header__wrapper">
             <a href='#' class="header__logo">
-              <i class="ico ico-logo"></i>
+              <i class="ico ico-logo">Gde Toner</i>
             </a>
             <!-- header center -->
             <div class="header__center">
               <div class="header__search search-header">
-                <div class="search-header__label">
+                <label for='quick-search' class="search-header__label">
                   Быстрый поиск стоимости услуг
-                </div>
-                <form class="search-header__box">
-                  <input class='ui-input' type="text" placeholder="введите наименование устройства или картриджа">
+                </label>
+                <form class="search-header__box" js-quick-search>
+                  <input class='ui-input' id='quick-search' type="text" placeholder="введите наименование устройства или картриджа" data-quick-search-url="src/json/quick-search.json" js-quick-search-entry>
                   <button type='submit'>
                     <i class="ico ico-search"></i>
                   </button>
@@ -165,11 +165,11 @@
               <div class="h1-title">Ролевой нишевый проект: методология и особенности</div>
 
               <p>Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения существенных финансовых и административных условий. Таким образом консультация с широким активом позволяет выполнять важные задания по разработке новых предложений. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности требуют от нас анализа форм развития.</p>
-              <div class="h2-title">Идейные соображения высшего порядка</div>
+              <h2 class="h2-title">Идейные соображения высшего порядка</h2>
               <p>Равным образом укрепление и развитие структуры представляет собой интересный эксперимент проверки форм развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также новая модель организационной деятельности представляет собой интересный эксперимент проверки форм развития.
               Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что реализация намеченных плановых заданий позволяет оценить значение новых предложений. </p>
 
-              <table>
+              <table class='responsive-table' js-responsive-table>
                 <thead>
                   <tr>
                     <td>Номер</td>
@@ -229,62 +229,62 @@
       <!-- SIMILAR CONTENT :: START -->
       <div class="similar">
         <div class="container">
-          <div class="similar__list">
+          <div class="similar__list" js-fancybox>
             <!-- card -->
-            <a href="#" class="similar__card card-similar">
-              <div class="card-similar__image">
+            <div class="similar__card card-similar">
+              <a href="./src/img/tmp/textBlock_1.png" class="card-similar__image" data-fancybox="similar-card">
                 <img src="./src/img/tmp/textBlock_1.png" srcset='./src/img/tmp/textBlock_1@2x.png 2x' alt="">
-              </div>
-              <div class="card-similar__title">Начальная стадия проведения исследования</div>
+              </a>
+              <a href="#" class="card-similar__title">Начальная стадия проведения исследования</a>
               <div class="card-similar__description">По мнению ведущих маркетологов, PR индуктивно раскручивает общественный фирменный стиль.</div>
-            </a>
+            </div>
             <!-- card -->
-            <a href="#" class="similar__card card-similar">
-              <div class="card-similar__image">
+            <div class="similar__card card-similar">
+              <a href="./src/img/tmp/textBlock_2.png" class="card-similar__image" data-fancybox="similar-card">
                 <img src="./src/img/tmp/textBlock_2.png" srcset='./src/img/tmp/textBlock_2@2x.png 2x' alt="">
-              </div>
-              <div class="card-similar__title">Начальная стадия проведения исследования</div>
+              </a>
+              <a href="#" class="card-similar__title">Начальная стадия проведения исследования</a>
               <div class="card-similar__description">По мнению ведущих маркетологов, PR индуктивно менный стиль.</div>
-            </a>
+            </div>
             <!-- card -->
-            <a href="#" class="similar__card card-similar">
-              <div class="card-similar__image">
+            <div class="similar__card card-similar">
+              <a href="./src/img/tmp/textBlock_3.png" class="card-similar__image" data-fancybox="similar-card">
                 <img src="./src/img/tmp/textBlock_3.png" srcset='./src/img/tmp/textBlock_3@2x.png 2x' alt="">
-              </div>
-              <div class="card-similar__title">Начальная стадия проведения исследования</div>
+              </a>
+              <a href="#" class="card-similar__title">Начальная стадия проведения исследования</a>
               <div class="card-similar__description">По мнению ведущих маркетологов, PR индуктивно раскручивает общественный фирменный стиль.</div>
-            </a>
+            </div>
             <!-- card -->
-            <a href="#" class="similar__card card-similar">
-              <div class="card-similar__image">
+            <div class="similar__card card-similar">
+              <a href="./src/img/tmp/textBlock_1.png" class="card-similar__image" data-fancybox="similar-card">
                 <img src="./src/img/tmp/textBlock_1.png" srcset='./src/img/tmp/textBlock_1@2x.png 2x' alt="">
-              </div>
-              <div class="card-similar__title">Начальная стадия проведения исследования</div>
-              <div class="card-similar__description">По мнению ведущихобщественный фирменный стиль.</div>
-            </a>
+              </a>
+              <a href="#" class="card-similar__title">Начальная стадия проведения исследования</a>
+              <div class="card-similar__description">По мнению ведущихо бщественный фирменный стиль.</div>
+            </div>
             <!-- card -->
-            <a href="#" class="similar__card card-similar">
-              <div class="card-similar__image">
+            <div class="similar__card card-similar">
+              <a href="./src/img/tmp/textBlock_2.png" class="card-similar__image" data-fancybox="similar-card">
                 <img src="./src/img/tmp/textBlock_2.png" srcset='./src/img/tmp/textBlock_2@2x.png 2x' alt="">
-              </div>
-              <div class="card-similar__title">Начальная стадия проведения исследования</div>
+              </a>
+              <a href="#" class="card-similar__title">Начальная стадия проведения исследования</a>
               <div class="card-similar__description">По мнению ведущих маркетологов, PR индуктивно раскручивает общественный фирменный стиль.</div>
-            </a>
+            </div>
             <!-- card -->
-            <a href="#" class="similar__card card-similar">
-              <div class="card-similar__image">
+            <div class="similar__card card-similar">
+              <a href="./src/img/tmp/textBlock_3.png" class="card-similar__image" data-fancybox="similar-card">
                 <img src="./src/img/tmp/textBlock_3.png" srcset='./src/img/tmp/textBlock_3@2x.png 2x' alt="">
-              </div>
-              <div class="card-similar__title">Начальная стадия проведения исследования</div>
+              </a>
+              <a href="#" class="card-similar__title">Начальная стадия проведения исследования</a>
               <div class="card-similar__description">индуктивно раскручивает общественный фирменный стиль.</div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
       <!-- SIMILAR CONTENT :: START -->
 
       <!-- FOOTER :: START -->
-      <div class="footer">
+      <div class="footer" js-footer-sticky>
         <div class="cmyk-line">
           <div class="cmyk-line__line cmyk-line__line--blue"></div>
           <div class="cmyk-line__line cmyk-line__line--yellow"></div>
@@ -350,7 +350,7 @@
             </div>
             <a href='#' target='_blank' class="footer__developer">
               <span>Сделано в</span>
-              <i class="ico ico-binardi"></i>
+              <i class="ico ico-binardi">binardi</i>
             </a>
           </div>
         </div>
@@ -388,7 +388,7 @@
               </div>
               <div class="ui-group">
                 <label>Дата <span class="ui-group__required">*</span></label>
-                <input type="date" placeholder="" class="ui-input ui-input--date">
+                <input type="text" placeholder="" class="ui-input ui-input--date" js-datepicker>
               </div>
             </div>
             <div class="pop-up__col">

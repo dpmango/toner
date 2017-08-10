@@ -35,7 +35,7 @@
         color: $colorMuted
       a
         transition: all $transitionSpeed $ease
-        &:hover
+        body:not(.mobile) &:hover
           color: $colorBlue
   &__phone
     font-size: 24px
@@ -85,7 +85,7 @@
         margin: 0
         align-items: flex-start
     &__line
-      flex: 0 0 100%
+      flex: 0 0 auto
       margin-bottom: 15px
       padding: 0
       &-name

@@ -6,16 +6,20 @@
   background: #35363e
   color: #9496a7
   font-size: 16px
+  max-width: 100vw
+  overflow-x: hidden
   &__wrapper
     padding: 45px 0 0px 0
     display: flex
+    width: 100%
   &__contacts
-    flex: 0 0 auto
+    min-width: 0
+    flex: 0 0 600px
     display: flex
     justify-content: space-between
   &__menu, .footer__menu ul
     display: inline-block
-    flex: 0 1 auto
+    flex: 1 1 auto
     margin-left: auto
     display: flex
     justify-content: space-between
@@ -34,8 +38,13 @@
         display: inline-block
         padding: 5px 5px
         transition: all $transitionSpeed $ease
-        &:hover
+        body:not(.mobile) &:hover
           color: $colorPink
+  &__menu
+    margin-left: auto
+  .footer__menu ul
+    margin-left: -5px
+    margin-right: -5px
   &__bottom
     padding: 50px 0 40px 0
     display: flex
@@ -43,17 +52,21 @@
     font-weight: 300
   &__copy
     flex: 0 1 auto
+    white-space: nowrap
   &__developer
     display: inline-block
     flex: 0 0 auto
     margin-left: auto
     display: flex
-    align-items: baseline
+    align-items: flex-end
     transition: opacity $transitionSpeed $ease
     span
       display: inline-block
       margin-right: 5px
-    &:hover
+      margin-bottom: -3px
+    .ico
+      font-size: 0
+    body:not(.mobile) &:hover
       opacity: .7
 
 
@@ -61,7 +74,6 @@
 .contacts-footer
   &__col
     flex: 0 1 50%
-    max-width: 210px
   a
     display: block
     margin-bottom: 10px
@@ -69,7 +81,7 @@
     font-size: 18px
     color: white
     transition: color $transitionSpeed $ease
-    &:hover
+    body:not(.mobile) &:hover
       color: $colorPink
   span
     line-height: 1.7

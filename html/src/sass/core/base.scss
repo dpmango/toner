@@ -3,8 +3,7 @@
 html,
 body {
 	min-height: 100%;
-  min-width: 320px;
-  overflow-x: hidden;
+	min-width: 320px;
 }
 
 *:focus{
@@ -26,7 +25,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 	outline: 0;
-	&:hover {
+	body:not(.mobile) &:hover {
 		text-decoration: none;
 	}
 }

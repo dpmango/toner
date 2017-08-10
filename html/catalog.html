@@ -47,16 +47,16 @@
         <div class="container">
           <div class="header__wrapper">
             <a href='#' class="header__logo">
-              <i class="ico ico-logo"></i>
+              <i class="ico ico-logo">Gde Toner</i>
             </a>
             <!-- header center -->
             <div class="header__center">
               <div class="header__search search-header">
-                <div class="search-header__label">
+                <label for='quick-search' class="search-header__label">
                   Быстрый поиск стоимости услуг
-                </div>
-                <form class="search-header__box">
-                  <input class='ui-input' type="text" placeholder="введите наименование устройства или картриджа">
+                </label>
+                <form class="search-header__box" js-quick-search>
+                  <input class='ui-input' id='quick-search' type="text" placeholder="введите наименование устройства или картриджа" data-quick-search-url="src/json/quick-search.json" js-quick-search-entry>
                   <button type='submit'>
                     <i class="ico ico-search"></i>
                   </button>
@@ -153,9 +153,14 @@
             <span>Каталог картриджей</span>
           </div>
           <div class="h1-title">Заправить картридж</div>
-          <p>Раскрутка, в рамках сегодняшних воззрений, искажает комплексный бренд. Исходя из структуры пирамиды Маслоу, организация службы маркетинга стабилизирует инвестиционный продукт, не считаясь с затратами.</p>
         </div>
       </div>
+      <div class="text-under-heading">
+        <div class="container">
+          <p class="t-muted">Раскрутка, в рамках сегодняшних воззрений, искажает комплексный бренд. Исходя из структуры пирамиды Маслоу, организация службы маркетинга стабилизирует инвестиционный продукт, не считаясь с затратами.</p>
+        </div>
+      </div>
+
       <!-- HEADING :: END -->
 
       <!-- SERVICES :: START -->
@@ -166,22 +171,22 @@
               <div class="h2-title">Узнать стоимость услуг</div>
               <div class="services__left-name">Выберите производителя техники:</div>
               <div class="manufacturer-list">
-                <a href="#"><span>Brother</span></a>
-                <a href="#"><span>Konica-Minolta</span></a>
-                <a href="#"><span>Panasonic</span></a>
-                <a href="#"><span>Samsung</span></a>
-                <a href="#"><span>Brother</span></a>
-                <a href="#"><span>Konica-Minolta</span></a>
-                <a href="#"><span>Panasonic</span></a>
-                <a href="#"><span>Samsung</span></a>
-                <a href="#"><span>Brother</span></a>
-                <a href="#"><span>Konica-Minolta</span></a>
-                <a href="#"><span>Panasonic</span></a>
-                <a href="#"><span>Samsung</span></a>
-                <a href="#"><span>Brother</span></a>
-                <a href="#"><span>Konica-Minolta</span></a>
-                <a href="#"><span>Panasonic</span></a>
-                <a href="#"><span>Samsung</span></a>
+                <div class="manufacturer-list__item"><a href="#"><span>Brother</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Konica-Minolta</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Panasonic</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Samsung</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Brother</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Konica-Minolta</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Panasonic</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Samsung</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Brother</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Konica-Minolta</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Panasonic</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Samsung</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Brother</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Konica-Minolta</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Panasonic</span></a></div>
+                <div class="manufacturer-list__item"><a href="#"><span>Samsung</span></a></div>
               </div>
             </div>
             <div class="services__right">
@@ -266,7 +271,7 @@
       <!-- BENEFITS :: END -->
 
       <!-- FOOTER :: START -->
-      <div class="footer">
+      <div class="footer" js-footer-sticky>
         <div class="cmyk-line">
           <div class="cmyk-line__line cmyk-line__line--blue"></div>
           <div class="cmyk-line__line cmyk-line__line--yellow"></div>
@@ -332,7 +337,7 @@
             </div>
             <a href='#' target='_blank' class="footer__developer">
               <span>Сделано в</span>
-              <i class="ico ico-binardi"></i>
+              <i class="ico ico-binardi">binardi</i>
             </a>
           </div>
         </div>
@@ -370,7 +375,7 @@
               </div>
               <div class="ui-group">
                 <label>Дата <span class="ui-group__required">*</span></label>
-                <input type="date" placeholder="" class="ui-input ui-input--date">
+                <input type="text" placeholder="" class="ui-input ui-input--date" js-datepicker>
               </div>
             </div>
             <div class="pop-up__col">

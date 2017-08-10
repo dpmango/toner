@@ -28,9 +28,10 @@
 
   &-card
     display: inline-block
-    flex: 0 1 25%
-    padding: 0 15px
+    flex: 0 1 calc(25% - 30px)
+    margin: 0 15px
     &__image
+      display: block
       position: relative
       overflow: hidden
       height: 190px
@@ -44,28 +45,30 @@
         width: auto
         height: auto
         transition: transform $transitionSpeed $ease
+      body:not(.mobile) &:hover
+        img
+          transform: translate(-50%,-50%) scale(1.1)
     &__title
+      display: block
       margin-top: 35px
       font-size: 24px
       font-weight: 700
       line-height: 1
       text-decoration: underline
       transition: color $transitionSpeed $ease
+      body:not(.mobile) &:hover
+        color: $colorBlue
     &__description
       font-size: 16px
       font-weight: 300
       color: $colorMuted
       margin-top: 10px
-    &:hover
-      .promo-card__image
-        img
-          transform: translate(-50%,-50%) scale(1.1)
-      .promo-card__title
-        color: $colorBlue
 
 +r($xl)
   .promo
     padding: 60px 0
+    &--inner
+      padding: 40px 0
     &__list
       margin-top: 40px
     &-card
@@ -75,8 +78,12 @@
 +r($l)
   .promo
     padding: 50px 0
+    &--inner
+      padding: 30px 0 30px 0
+      .promo__wrapper
+        margin-top: 0
     &-card
-      flex-basis: 33.3%
+      flex-basis: calc(33.3% - 30px)
       &:nth-child(4n + 1)
         display: none
     &--inner
@@ -100,11 +107,15 @@
 
 +r($s)
   .promo
+    &--inner
+      padding-bottom: 20px
+      .promo-card
+        margin-bottom: 40px
     &__head
       .blue-link
         font-size: 14px
     &-card
-      flex: 0 0 100%
+      flex: 0 1 calc(100% - 30px)
       max-width: 400px
       margin-left: auto
       margin-right: auto

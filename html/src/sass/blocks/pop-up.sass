@@ -2,8 +2,6 @@
 @import '../core/mixins'
 
 .pop-up
-  opacity: 0
-  display: block
   position: fixed
   z-index: 1100
   top: 0
@@ -14,12 +12,13 @@
   overflow: auto
   -webkit-overflow-scrolling: touch
   cursor: pointer
-  pointer-events: none
-  transition: all $transitionSpeed $ease
+  transition: 0.2s
+  visibility: hidden
+  opacity: 0
 
   &.active
+    visibility: visible
     opacity: 1
-    pointer-events: all
 
   &__insides
     position: relative
@@ -51,9 +50,11 @@
   &__wrapper
     margin: 25px -25px 0 -25px
     display: flex
-  &__col
-    flex: 0 1 50%
-    padding: 0 25px
+    flex-wrap: wrap
+    .ui-group
+      flex: 0 1 calc(50% - 50px)
+      margin-left: 25px
+      margin-right: 25px
 
   &__cta
     margin: 45px 0
@@ -62,10 +63,11 @@
   .pop-up
     &__wrapper
       margin: 25px 0 0 0
-      flex-direction: column
-    &__col
-      flex: 0 0 auto
-      padding: 0
+      .ui-group
+        flex: 0 0 auto
+        width: 100%
+        margin-left: 0
+        margin-right: 0
 
 +r(414px)
   .pop-up

@@ -13,8 +13,10 @@ const onDOMContentLoaded = function () {
 		'./js/customMethods',
 		'./js/mobileDetect',
 		'./js/touchTap',
+		'./js/callbackBuffer',
 
 		'./js/modules/inputMask',
+		'./js/modules/datepicker',
 	], (require) => {
 		require('babel-polyfill');
 
@@ -26,8 +28,12 @@ const onDOMContentLoaded = function () {
 		require('./js/touchTap')();
 
 		window.inputMask = require('./js/modules/inputMask');
+		window.datepicker = require('./js/modules/datepicker');
 
 		initCustomWidgets();
+
+		const CallbackBuffer  = require('./js/callbackBuffer');
+		window.callbackBuffer = new CallbackBuffer(window.callbackBuffer || []);
 	});
 };
 
@@ -48,18 +54,6 @@ const initCustomWidgets = window.initCustomWidgets = function () {
 		require.ensure(['./js/modules/formError'], (require) => require('./js/modules/formError')());
 	}
 
-	if (document.querySelector('[js-footer-sticky]')) {
-		require.ensure(['./js/modules/footerSticky'], (require) => require('./js/modules/footerSticky')());
-	}
-
-	if (document.querySelector('[js-back-to-top]')) {
-		require.ensure(['./js/modules/backToTop'], (require) => require('./js/modules/backToTop')());
-	}
-
-	if (document.querySelector('a[href^="#anchor-"]')) {
-		require.ensure(['./js/modules/scrollingToAnchor'], (require) => require('./js/modules/scrollingToAnchor')());
-	}
-
 	if (document.querySelector('[type="tel"]')) {
 		window.inputMask();
 	}
@@ -72,30 +66,29 @@ const initCustomWidgets = window.initCustomWidgets = function () {
 		require.ensure(['./js/modules/yandexMap'], (require) => require('./js/modules/yandexMap')());
 	}
 
-	if (document.querySelector('[js-fancybox]')) {
+	if (document.querySelector('[js-magic-filter]')) {
+		require.ensure(['./js/modules/magicFilter'], (require) => require('./js/modules/magicFilter')());
+	}
+
+  if (document.querySelector('[js-quick-search]')) {
+		require.ensure(['./js/modules/quickSearch'], (require) => require('./js/modules/quickSearch')());
+	}
+
+  if (document.querySelector('[js-footer-sticky]')) {
+		require.ensure(['./js/modules/footerSticky'], (require) => require('./js/modules/footerSticky')());
+	}
+
+  if (document.querySelector('[js-fancybox]')) {
 		require.ensure(['./js/modules/fancybox'], (require) => require('./js/modules/fancybox')());
 	}
 
-	if (document.querySelector('[js-slider]')) {
-		require.ensure(['./js/modules/slickCarousel'], (require) => require('./js/modules/slickCarousel')());
+  if (document.querySelector('[js-datepicker]')) {
+		window.datepicker();
 	}
-
-	if (document.querySelector('img[data-src]')) {
-		require.ensure(['./js/modules/lazyload'], (require) => require('./js/modules/lazyload')());
-	}
-
-	if (document.querySelector('[js-tabs]')) {
-		require.ensure(['./js/modules/tabs'], (require) => require('./js/modules/tabs')());
-	}
-
-  // if (document.querySelector('a[href="#"]')) {
-	// 	require.ensure(['./js/modules/preventDefault'], (require) => require('./js/modules/preventDefault')());
-	// }
 
   if (document.querySelector('[js-mobile-menu]')) {
 		require.ensure(['./js/modules/hamburgerMobile'], (require) => require('./js/modules/hamburgerMobile')());
 	}
 
 	require.ensure(['./styles-entry'], (require) => require('./styles-entry'));
-  require.ensure(['./pug-entry'], (require) => require('./pug-entry'));
 };

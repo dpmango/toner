@@ -6,6 +6,8 @@
 .cta
   padding: 140px 0 0 0
   background: #fafafa
+  &--inner
+    padding-top: 90px
   &__wrapper
     display: flex
     flex-direction: column
@@ -21,7 +23,7 @@
     span
       color: $colorMuted
       transition: color $transitionSpeed $ease
-    &:hover
+    body:not(.mobile) &:hover
       color: $colorBlue
       span
         color: $fontColor
@@ -68,6 +70,8 @@
       flex-basis: 30%
     .ico-arrow
       margin-top: 25px
+      margin-left: auto
+      margin-right: auto
   &__wrapper
     display: flex
     flex-direction: column
@@ -100,6 +104,9 @@
     color: $colorMuted
 
 +r($xl)
+  .cta
+    &--inner
+      padding-top: 60px
   .steps-cta
     &__wrapper
       max-width: 250px
@@ -108,7 +115,11 @@
         margin-left: auto
         margin-right: 5%
 
+
 +r($l)
+  .cta
+    &--inner
+      padding-top: 40px
   .top-cta
     &__left
       max-width: 590px

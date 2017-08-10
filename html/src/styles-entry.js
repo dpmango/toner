@@ -9,6 +9,7 @@ require("./sass/blocks/layout.sass");
 require("./sass/elements/_ui.sass");
 require("./sass/elements/_icons.sass");
 require("./sass/elements/_buttons.sass");
+require("./sass/elements/_datepicker.sass");
 
 require("./sass/vendor/hamburgers/hamburgers.scss");
 
@@ -17,6 +18,7 @@ require("./sass/blocks/pop-up.sass");
 require("./sass/blocks/form-error.scss");
 require("./sass/blocks/page.scss");
 require("./sass/blocks/responsive-table.sass");
+require("./sass/blocks/quick-search.sass");
 
 require("./sass/blocks/header.sass");
 require("./sass/blocks/mobile-menu.sass");
